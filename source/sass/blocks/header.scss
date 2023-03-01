@@ -1,0 +1,59 @@
+.header {
+  background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+
+  &__wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1220px;
+    padding: 30px 50px 35px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+    gap: 15px;
+    max-width: 225px;
+  }
+
+  &__link {
+    color: $text-white-alt;
+  }
+
+  &__icon {
+    fill: $light-blue;
+  }
+
+  &__button {
+    background-color: transparent;
+    border: 1px solid $text-white-alt;
+    border-radius: 3px;
+    color: $text-white-alt;
+    font-family: inherit;
+    margin: 0;
+    margin-right: 60px;
+    padding: 0;
+    text-transform: uppercase;
+  }
+
+  @include vp-1023 {
+    &__list {
+      margin-right: 20px;
+    }
+
+    &__link {
+      display: none;
+    }
+
+    &__button {
+      display: none;
+    }
+  }
+}

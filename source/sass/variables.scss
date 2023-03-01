@@ -15,11 +15,7 @@ $color-torch-red: #ff1553;
 
 // Gradient
 
-$black-to-right: linear-gradient(
-  90deg,
-  rgba(0, 0, 0, 0.75) 0%,
-  rgba(0, 0, 0, 0) 75%
-);
+$black-to-right: linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
 
 // Typography
 // ---------------------------------
@@ -29,9 +25,10 @@ $fz-default: 16px;
 
 // у некоторых шрифтов в ios возникают проблемы с символом рубля
 // https://www.artlebedev.ru/kovodstvo/sections/159/#13
-$ff-rouble: "Rouble", "Arial", sans-serif;
 
-$ff-placeholder: "Placeholder", "Arial", sans-serif;
+$ff-ptmono: "PT Mono", "Arial", sans-serif;
+
+$ff-robotocondensed: "Roboto Condensed", "Arial", sans-serif;
 
 // Animation
 // ---------------------------------
@@ -60,3 +57,10 @@ $vp-1920: 1920px;
 
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
+
+// Colors
+
+$text-white: #ffffff;
+$text-white-alt: #f2f5f6;
+$light-blue: #00b2ff;
+$dark-blue: #041427;
