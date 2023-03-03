@@ -14,9 +14,15 @@
 
   <body>
     <div class="wrapper">
-      <header class="header container">
-        <div class="header__wrapper container__wrapper">
-          <div class="header__content">
+      <header class="header">
+        <div class="header__background">
+          <picture>
+            <source type="image/webp" srcset="./img/intro/intro-background-image.webp, ./img/intro/intro-background-image@2x.webp 2x">
+            <img src="./img/intro/intro-background-image.jpg" srcset="./img/intro/intro-background-image@2x.jpg 2x" width="1920" height="880">
+          </picture>
+        </div>
+        <div class="header__top container">
+          <div class="header__top-content container__wrapper">
             <div class="header__logo logo">
               <a class="logo__link" href="#">
                 <picture>
@@ -42,26 +48,18 @@
             <button class="header__button button button--transparent-white" type="button">Заказать звонок</button>
           </div>
         </div>
-      </header>
-      <main>
-        <section class="intro container">
-          <div class="intro__background">
-            <div class="intro__fade"></div>
-            <div class="intro__image">
-              <picture>
-                <source type="image/webp" srcset="./img/intro/intro-background-image.webp, ./img/intro/intro-background-image@2x.webp 2x">
-                <img src="./img/intro/intro-background-image.jpg" srcset="./img/intro/intro-background-image@2x.jpg 2x" width="1920" height="880">
-              </picture>
-            </div>
-          </div>
-          <div class="intro__wrapper container__wrapper">
-            <h1 class="visually-hidden">Smart Device&nbsp;&mdash; умные технологии</h1>
+        <div class="header__bottom container">
+          <div class="header__bottom-content container__wrapper">
             <h2>Печатные платы</h2>
             <p>Производство и монтаж, поставка комплектующих, блоков&nbsp;и&nbsp;модулей</p>
             <button class="intro__button button button--blue" type="button">Получить бесплатную консультацию</button>
           </div>
-        </section>
+        </div>
+      </header>
+
+      <main>
         <section class="advantages container">
+          <h1 class="visually-hidden">Smart Device&nbsp;&mdash; умные технологии</h1>
           <h2 class="visually-hidden">Приемущества.</h2>
           <div class="container__wrapper">
             <ul class="advantages__list">
@@ -164,21 +162,27 @@
           </div>
         </section>
       </main>
-      <section class="feedback">
-        <picture>
-          <source type="image/webp" srcset="./img/feedback/plane.webp, ./img/feedback/plane@2x.webp 2x">
-          <img class="feedback__image" src="./img/feedback/plane.png" srcset="./img/feedback/plane@2x.png 2x" width="510" height="285">
-        </picture>
-        <div class="feedback__wrapper">
-          <h2>Остались вопросы? Задайте их&nbsp;нам!</h2>
-          <p>Мы&nbsp;проконсультируем Вас бесплатно</p>
-          <form action="https://echo.htmlacademy.ru" method="post">
-            <input name="name" type="text" placeholder="Имя">
-            <input name="tel" type="tel" placeholder="Телефон">
-            <textarea name="question" placeholder="Ваш вопрос"></textarea>
-            <label><input type="checkbox">Я согласен на обработку персональных данных</label>
-            <input type="submit" value="Задать вопрос">
-          </form>
+      <section class="feedback container">
+        <div class="feedback__wrapper container__wrapper">
+          <picture>
+            <source type="image/webp" srcset="./img/feedback/plane.webp, ./img/feedback/plane@2x.webp 2x">
+            <img class="feedback__image" src="./img/feedback/plane.png" srcset="./img/feedback/plane@2x.png 2x" width="510" height="285">
+          </picture>
+          <div class="feedback__content">
+            <h2>Остались вопросы? Задайте их&nbsp;нам!</h2>
+            <p>Мы&nbsp;проконсультируем Вас бесплатно</p>
+            <form action="https://echo.htmlacademy.ru" method="post">
+              <div>
+                <input name="name" type="text" placeholder="Имя">
+                <input name="tel" type="tel" placeholder="Телефон">
+              </div>
+              <textarea name="question" placeholder="Ваш вопрос"></textarea>
+              <div>
+                <input type="submit" value="Задать вопрос">
+                <label><input type="checkbox">Я согласен на обработку персональных данных</label>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
 
@@ -280,8 +284,9 @@
           </button>
         </div>
     </div> -->
+
+      <!-- <script src="js/vendor.min.js"></script> -->
+      <script src="js/main.min.js"></script>
     </div>
-    <!-- <script src="js/vendor.min.js"></script> -->
-    <script src="js/main.min.js"></script>
   </body>
 </html>

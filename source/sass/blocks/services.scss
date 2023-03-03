@@ -1,66 +1,80 @@
 .services {
-  &__list {
-    display: grid;
-    gap: 25px;
-    grid-template-columns: repeat(3, minmax(50px, 350px));
-    grid-template-rows: minmax(650px, 1fr);
-    justify-content: space-between;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  background-color: #041827;
+}
+.services__container {
+  padding-bottom: 140px;
+  padding-top: 70px;
+}
+.services__list {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(3, minmax(100px, 350px));
+  grid-template-rows: minmax(650px, 1fr);
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 
-    @include vp-1023 {
-      display: flex;
-      flex-direction: column;
-      min-height: 250px;
-    }
-  }
-
-  p {
+  @include vp-1023 {
     display: flex;
+    flex-direction: column;
+    min-height: 250px;
+  }
+}
+
+.services p {
+  display: flex;
+  height: 100%;
+  margin: 0;
+  padding: 50px 80px 50px 40px;
+  width: 100%;
+}
+
+.services h2 {
+  color: $text-white;
+  font-family: $ff-robotocondensed;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 51px;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+.services img {
+  background: rgb(13, 55, 87);
+  height: 100%;
+  object-fit: none;
+  position: absolute;
+}
+
+.services a {
+  color: $text-white;
+  height: 100%;
+  margin: 0;
+
+  &::after {
+    background: rgba(4, 24, 39, 0.5);
+    content: "";
     height: 100%;
-    margin: 0;
-    padding: 50px 80px 50px 40px;
+    position: absolute;
+    top: 0;
     width: 100%;
   }
+}
 
-  & img {
-    background: rgb(13, 55, 87);
-    height: 100%;
-    object-fit: none;
-    position: absolute;
-    z-index: -2;
+.services__item {
+  position: relative;
+
+  &--1 img {
+    object-position: 16.5% 69.15%;
   }
 
-  a {
-    color: $text-white;
-    height: 100%;
-
-    &::after {
-      background: rgba(4, 24, 39, 0.5);
-      content: "";
-      height: 100%;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      z-index: -1;
-    }
+  &--2 img {
+    object-position: 46.7% 72.3%;
   }
 
-  &__item {
-    position: relative;
-
-    &--1 img {
-      object-position: 16.5% 69.15%;
-    }
-
-    &--2 img {
-      object-position: 46.7% 72.3%;
-    }
-
-    &--3 img {
-      object-position: 78.15% 65.7%;
-    }
+  &--3 img {
+    object-position: 78.15% 65.7%;
   }
 
   @include vp-1023 {
