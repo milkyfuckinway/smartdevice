@@ -2,14 +2,13 @@
   background-color: transparent;
   border: 0;
   border-radius: 3px;
-  box-sizing: content-box;
+  cursor: pointer;
   font-family: $ff-robotocondensed;
   font-size: 14px;
   font-weight: bold;
   height: auto;
   letter-spacing: 0.05em;
   line-height: 16px;
-  margin: 0 60px 0 0;
   padding: 10px 15px;
   text-decoration: none;
   text-transform: uppercase;
@@ -21,11 +20,20 @@
 
   &--blue {
     background-color: $light-blue;
+    color: $text-white-alt;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+    min-height: 55px;
+    padding: 15px 27px;
   }
 
   &--transparent-blue {
     background-color: transparent;
     border: 1px solid $light-blue;
+    color: $light-blue;
+    min-width: 180px;
+    padding: 14px 20px;
   }
 
   &--dark {

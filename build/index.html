@@ -14,83 +14,120 @@
 
   <body>
     <div class="wrapper">
-      <header class="header">
-        <div class="header__wrapper">
-          <div class="header__logo logo">
-            <a class="logo__link" href="#">
-              <picture>
-                <source media="(max-width: 767px)" width="55" height="55" srcset="./img/svg/logo-short.svg">
-                <img src="./img/svg/logo-full.svg" width="215" height="55">
-              </picture>
-            </a>
+      <header class="header container">
+        <div class="header__wrapper container__wrapper">
+          <div class="header__content">
+            <div class="header__logo logo">
+              <a class="logo__link" href="#">
+                <picture>
+                  <source media="(max-width: 767px)" width="55" height="55" srcset="./img/svg/logo-short.svg">
+                  <img src="./img/svg/logo-full.svg" width="215" height="55">
+                </picture>
+              </a>
+            </div>
+            <ul class="header__list">
+              <li class="header__item">
+                <a class="header__link" href="mailto:info@sd.ru">
+                  <svg class="header__icon" width="20" height="20">
+                    <use xlink:href="./img/sprite.svg#mail"></use></svg><span class="header__link-content">info@sd.ru</span>
+                </a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="tel:+74950005252">
+                  <svg class="header__icon" width="20" height="20">
+                    <use xlink:href="./img/sprite.svg#phone"></use></svg><span class="header__link-content">+7 (495) 000 52 52</span>
+                </a>
+              </li>
+            </ul>
+            <button class="header__button button button--transparent-white" type="button">Заказать звонок</button>
           </div>
-          <ul class="header__list">
-            <li class="header__item">
-              <svg class="header__icon" width="20" height="20">
-                <use xlink:href="./img/sprite.svg#mail"></use>
-              </svg>
-              <a class="header__link" href="mailto:info@sd.ru">info@sd.ru</a>
-            </li>
-            <li class="header__item">
-              <svg class="header__icon" width="20" height="20">
-                <use xlink:href="./img/sprite.svg#phone"></use>
-              </svg>
-              <a class="header__link" href="tel:+74950005252">+7 (495) 000 52 52</a>
-            </li>
-          </ul>
-          <button class="header__button button button--transparent-white" type="button">Заказать звонок</button>
         </div>
       </header>
       <main>
-        <section class="intro">
+        <section class="intro container">
           <div class="intro__background">
             <div class="intro__fade"></div>
-            <div class="intro__image"><img src="./img/intro/intro-background-image.jpg" width="1920" height="880"></div>
+            <div class="intro__image">
+              <picture>
+                <source type="image/webp" srcset="./img/intro/intro-background-image.webp, ./img/intro/intro-background-image@2x.webp 2x">
+                <img src="./img/intro/intro-background-image.jpg" srcset="./img/intro/intro-background-image@2x.jpg 2x" width="1920" height="880">
+              </picture>
+            </div>
           </div>
-          <div class="intro__content">
+          <div class="intro__wrapper container__wrapper">
             <h1 class="visually-hidden">Smart Device&nbsp;&mdash; умные технологии</h1>
             <h2>Печатные платы</h2>
-            <p>Производство и монтаж, поставка комплектующих, блоков и модулей</p>
-            <button class="intro__button" type="button">Получить бесплатную консультацию</button>
+            <p>Производство и монтаж, поставка комплектующих, блоков&nbsp;и&nbsp;модулей</p>
+            <button class="intro__button button button--blue" type="button">Получить бесплатную консультацию</button>
           </div>
         </section>
-        <section class="advantages">
+        <section class="advantages container">
           <h2 class="visually-hidden">Приемущества.</h2>
-          <ul class="advantages__list">
-            <li class="advantages__item">
-              <svg width="35" height="35">
-                <use xlink:href="./img/sprite.svg#stopwatch"></use>
-              </svg>
-              <h3>Оперативные сроки</h3>
-              <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и&nbsp;доставлять заказы плат и&nbsp;комплектующих в&nbsp;самые короткие сроки</p>
-            </li>
-            <li class="advantages__item">
-              <svg width="35" height="35">
-                <use xlink:href="./img/sprite.svg#hired"></use>
-              </svg>
-              <h3>Крупные поставщики</h3>
-              <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с&nbsp;такими компаниями обеспечивает хорошее качество нашей продукции.</p>
-            </li>
-            <li class="advantages__item">
-              <svg width="35" height="35">
-                <use xlink:href="./img/sprite.svg#detective"></use>
-              </svg>
-              <h3>Полная конфиденциальность</h3>
-              <p>По&nbsp;желанию клиента мы&nbsp;обеспечиваем полную конфиденциальность.</p>
-            </li>
-            <li class="advantages__item">
-              <svg width="35" height="35">
-                <use xlink:href="./img/sprite.svg#tag"></use>
-              </svg>
-              <h3>Персонализация стоимости</h3>
-              <p>Мы&nbsp;подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту&nbsp;цену, которая Вас устраивает.</p>
-            </li>
-          </ul>
+          <div class="container__wrapper">
+            <ul class="advantages__list">
+              <li class="advantages__item">
+                <svg width="35" height="35">
+                  <use xlink:href="./img/sprite.svg#stopwatch"></use>
+                </svg>
+                <h3>Оперативные сроки</h3>
+                <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и&nbsp;доставлять заказы плат и&nbsp;комплектующих в&nbsp;самые короткие сроки</p>
+              </li>
+              <li class="advantages__item">
+                <svg width="35" height="35">
+                  <use xlink:href="./img/sprite.svg#hired"></use>
+                </svg>
+                <h3>Крупные поставщики</h3>
+                <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с&nbsp;такими компаниями обеспечивает хорошее качество нашей продукции.</p>
+              </li>
+              <li class="advantages__item">
+                <svg width="35" height="35">
+                  <use xlink:href="./img/sprite.svg#detective"></use>
+                </svg>
+                <h3>Полная конфиденциальность</h3>
+                <p>По&nbsp;желанию клиента&nbsp;&nbsp;мы&nbsp;обеспечиваем полную конфиденциальность.</p>
+              </li>
+              <li class="advantages__item">
+                <svg width="35" height="35">
+                  <use xlink:href="./img/sprite.svg#tag"></use>
+                </svg>
+                <h3>Персонализация стоимости</h3>
+                <p>Мы&nbsp;&nbsp;подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту&nbsp;цену, которая Вас устраивает.</p>
+              </li>
+            </ul>
+          </div>
         </section>
-        <section class="about">
-          <h2>О компании</h2>
-          <p>Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые технологии с&nbsp;1997 года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10 дней.</p>
-          <p>Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
+        <section class="about container">
+          <div class="about__container container__wrapper">
+            <div class="about__year">
+              <picture>
+                <source type="image/webp" srcset="./img/about/year.webp, ./img/about/year@2x.webp 2x">
+                <img src="./img/about/year.png" srcset="./img/about/year@2x.png 2x" width="150" height="320">
+              </picture>
+            </div>
+            <div class="about__content">
+              <h2>О компании</h2>
+              <div class="about__text">
+                <div class="about__displayed">
+                  <p>Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые технологии с&nbsp;1997 года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10 дней.</p>
+                  <p>
+                    Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях
+                    Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.
+                  </p>
+                </div>
+                <div class="about__hidden">
+                  <p>
+                    Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более 1&nbsp;000&nbsp;000 клиентов, 70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент
+                    насчитывается более 14 офисов по&nbsp;всей стране и&nbsp;20 городов присутствия.
+                  </p>
+                  <p>
+                    Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время
+                    наших клиентов
+                  </p>
+                </div>
+              </div>
+              <button class="button button--transparent-blue" type="button">Подробнее</button>
+            </div>
+          </div>
         </section>
         <section class="services">
           <h2>Smart Device предлагает следующие товары и услуги</h2>
@@ -105,7 +142,8 @@
                   <source media="(max-width: 1023px)" srcset="./img/services/tablet/background-1.jpg, ./img/services/tablet/background-1@2x.jpg 2x">
                   <img class="services__background" src="./img/services/desktop/background-1.jpg" srcset="./img/services/desktop/background-1@2x.jpg 2x" width="350" height="650">
                 </picture>
-                <p>Производство печатных плат</p></a>
+                <p>Производство печатных плат</p>
+              </a>
             </li>
             <li class="services__item">
               <a href="#">
@@ -180,21 +218,43 @@
         </div>
         <nav class="navigation">
           <ul class="navigation__list">
-            <li class="navigation__item"><a class="navigation__link" href="#">О Компании</a></li>
-            <li class="navigation__item"><a class="navigation__link" href="#">Продукты</a></li>
-            <li class="navigation__item"><a class="navigation__link" href="#">Производство печатных плат</a></li>
-            <li class="navigation__item"><a class="navigation__link" href="#">Монтаж печатных плат</a></li>
-            <li class="navigation__item"><a class="navigation__link" href="#">Комплектующие</a></li>
-            <li class="navigation__item"><a class="navigation__link" href="#">Доставка</a></li>
-            <li class="navigation__item"><a class="navigation__link" href="#">Контакты</a></li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">О Компании</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Продукты</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Производство печатных плат</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Монтаж печатных плат</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Комплектующие</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Доставка</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Контакты</a>
+            </li>
           </ul>
         </nav>
         <section class="contacts">
           <ul class="contacts__list">
-            <li class="contacts__item"><a href="https://goo.gl/maps/KDxpRmWTAMP8CauD7">г. Мытищи, Олимпийский проспект, д.10</a></li>
-            <li class="contacts__item"><a href="tel:+74955894050">+7 (495) 589-40-50</a></li>
-            <li class="contacts__item"><a href="tel:+79253895829">+7 (925) 389-58-29</a></li>
-            <li class="contacts__item"><a href="tel:+79253647813">+7 (925) 364-78-13</a></li>
+            <li class="contacts__item">
+              <a href="https://goo.gl/maps/KDxpRmWTAMP8CauD7">г. Мытищи, Олимпийский проспект, д.10</a>
+            </li>
+            <li class="contacts__item">
+              <a href="tel:+74955894050">+7 (495) 589-40-50</a>
+            </li>
+            <li class="contacts__item">
+              <a href="tel:+79253895829">+7 (925) 389-58-29</a>
+            </li>
+            <li class="contacts__item">
+              <a href="tel:+79253647813">+7 (925) 364-78-13</a>
+            </li>
           </ul>
         </section>
       </footer>

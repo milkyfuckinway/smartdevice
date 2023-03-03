@@ -17,7 +17,10 @@ indent_size = 2
 indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
-max_line_length = 800
+max_line_length = 220
 
 [*.md]
 trim_trailing_whitespace = false
+
+[*.js]
+quote_type = single

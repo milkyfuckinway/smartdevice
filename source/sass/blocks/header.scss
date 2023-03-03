@@ -3,33 +3,39 @@
   z-index: 2;
 
   &__wrapper {
+    padding-bottom: 35px;
+    padding-top: 30px;
+  }
+
+  &__content {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
-    max-width: 1220px;
-    padding: 30px 0 35px;
   }
 
   &__list {
-    display: flex;
-    gap: 30px;
+    column-gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(225px, 1fr));
     list-style: none;
     padding: 0;
-  }
-
-  &__item {
-    display: flex;
-    gap: 15px;
-    max-width: 225px;
+    row-gap: 10px;
   }
 
   &__link {
+    align-items: center;
     color: $text-white-alt;
+    display: flex;
+    gap: 15px;
+  }
+
+  &__link-content {
+    line-height: 18px;
   }
 
   &__icon {
     fill: $light-blue;
+    flex-shrink: 0;
   }
 
   &__button {
@@ -38,18 +44,22 @@
     border-radius: 3px;
     color: $text-white-alt;
     font-family: inherit;
-    margin: 0;
-    margin-right: 60px;
+    margin: 0 60px 0 0;
     padding: 0;
     text-transform: uppercase;
   }
 
   @include vp-1023 {
     &__list {
-      margin-right: 20px;
+      display: flex;
+      margin-left: auto;
     }
 
     &__link {
+      padding: 10px;
+    }
+
+    &__link-content {
       display: none;
     }
 
