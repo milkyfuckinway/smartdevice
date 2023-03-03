@@ -1613,6 +1613,26 @@ button,
   margin-bottom: 20px;
 }
 
+.services__list {
+  display: -ms-grid;
+  display: grid;
+  gap: 85px;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 650px;
+  grid-template-rows: 650px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.services img {
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: auto;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -1704,6 +1724,16 @@ button,
 
   .about__text--shown {
     max-height: var(--full-text-height);
+  }
+
+  .services__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 
