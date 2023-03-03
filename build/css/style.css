@@ -1616,21 +1616,70 @@ button,
 .services__list {
   display: -ms-grid;
   display: grid;
-  gap: 85px;
-  -ms-grid-columns: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 650px;
-  grid-template-rows: 650px;
+  gap: 25px;
+  -ms-grid-columns: (minmax(50px, 350px))[3];
+  grid-template-columns: repeat(3, minmax(50px, 350px));
+  -ms-grid-rows: minmax(650px, 1fr);
+  grid-template-rows: minmax(650px, 1fr);
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.services img {
+.services p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  width: auto;
+  margin: 0;
+  padding: 50px 80px 50px 40px;
+  width: 100%;
+}
+
+.services img {
+  background: rgb(13, 55, 87);
+  height: 100%;
+  -o-object-fit: none;
+  object-fit: none;
+  position: absolute;
+  z-index: -2;
+}
+
+.services a {
+  color: #ffffff;
+  height: 100%;
+}
+
+.services a::after {
+  background: rgba(4, 24, 39, 0.5);
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.services__item {
+  position: relative;
+}
+
+.services__item--1 img {
+  -o-object-position: 16.5% 69.15%;
+  object-position: 16.5% 69.15%;
+}
+
+.services__item--2 img {
+  -o-object-position: 46.7% 72.3%;
+  object-position: 46.7% 72.3%;
+}
+
+.services__item--3 img {
+  -o-object-position: 78.15% 65.7%;
+  object-position: 78.15% 65.7%;
 }
 
 /* @mixin hover-focus {
@@ -1693,6 +1742,21 @@ button,
   .header__button {
     display: none;
   }
+
+  .services__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-height: 250px;
+  }
+
+  .services {
+    min-height: 250px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1724,16 +1788,6 @@ button,
 
   .about__text--shown {
     max-height: var(--full-text-height);
-  }
-
-  .services__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
   }
 }
 

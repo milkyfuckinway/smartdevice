@@ -1,22 +1,69 @@
 .services {
   &__list {
     display: grid;
-    gap: 85px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 650px;
+    gap: 25px;
+    grid-template-columns: repeat(3, minmax(50px, 350px));
+    grid-template-rows: minmax(650px, 1fr);
+    justify-content: space-between;
     list-style: none;
     margin: 0;
     padding: 0;
 
-    @include vp-767 {
+    @include vp-1023 {
       display: flex;
       flex-direction: column;
+      min-height: 250px;
     }
   }
 
-  & img {
+  p {
+    display: flex;
     height: 100%;
-    object-fit: cover;
-    width: auto;
+    margin: 0;
+    padding: 50px 80px 50px 40px;
+    width: 100%;
+  }
+
+  & img {
+    background: rgb(13, 55, 87);
+    height: 100%;
+    object-fit: none;
+    position: absolute;
+    z-index: -2;
+  }
+
+  a {
+    color: $text-white;
+    height: 100%;
+
+    &::after {
+      background: rgba(4, 24, 39, 0.5);
+      content: "";
+      height: 100%;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &--1 img {
+      object-position: 16.5% 69.15%;
+    }
+
+    &--2 img {
+      object-position: 46.7% 72.3%;
+    }
+
+    &--3 img {
+      object-position: 78.15% 65.7%;
+    }
+  }
+
+  @include vp-1023 {
+    min-height: 250px;
   }
 }
