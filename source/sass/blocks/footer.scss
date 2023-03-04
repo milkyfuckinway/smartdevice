@@ -1,0 +1,59 @@
+.footer {
+  background-color: $dark-blue;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.footer__links {
+  display: flex;
+  gap: 30px;
+}
+
+.footer__menu {
+  color: $text-white;
+}
+
+.footer__navigation {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(2, 220px);
+}
+
+.footer__menu h2 {
+  color: inherit;
+  font-family: $ff-robotocondensed;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  line-height: 16px;
+  margin: 0;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+
+.footer__list {
+  column-gap: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 16px;
+  line-height: 135%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  row-gap: 10px;
+  width: 100%;
+}
+.contacts {
+  max-width: 345px;
+}
+
+.footer__item a {
+  color: inherit;
+}

@@ -1,10 +1,22 @@
 .services {
-  background-color: #041827;
+  position: relative;
+
+  &::after {
+    background-color: $dark-blue;
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -10;
+  }
 }
+
 .services__container {
   padding-bottom: 140px;
   padding-top: 70px;
 }
+
 .services__list {
   display: grid;
   gap: 30px;
@@ -46,11 +58,12 @@
   height: 100%;
   object-fit: none;
   position: absolute;
+  top: 0;
+  z-index: -1;
 }
 
 .services a {
   color: $text-white;
-  height: 100%;
   margin: 0;
 
   &::after {
@@ -60,6 +73,7 @@
     position: absolute;
     top: 0;
     width: 100%;
+    z-index: -1;
   }
 }
 
