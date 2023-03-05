@@ -1,20 +1,15 @@
 .services {
-  position: relative;
-
-  &::after {
-    background-color: $dark-blue;
-    content: "";
-    height: 100%;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: -10;
-  }
+  background-color: #041827;
 }
 
 .services__container {
   padding-bottom: 140px;
   padding-top: 70px;
+
+  @include vp-1023 {
+    padding-bottom: 75px;
+    padding-top: 55px;
+  }
 }
 
 .services__list {
@@ -35,15 +30,26 @@
 }
 
 .services p {
-  display: flex;
-  height: 100%;
+  font-family: $ff-robotocondensed;
+  font-size: 20px;
+  line-height: 30px;
   margin: 0;
-  padding: 50px 80px 50px 40px;
-  width: 100%;
+  padding: 50px 40px;
+  position: relative;
+  width: 70%;
+  z-index: 1;
+
+  @include vp-1023 {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 40px 45px;
+    width: 40%;
+  }
 }
 
 .services h2 {
   color: $text-white;
+  display: flex;
   font-family: $ff-robotocondensed;
   font-size: 36px;
   font-weight: 400;
@@ -51,6 +57,11 @@
   margin: 0;
   margin-bottom: 50px;
   min-height: 50px;
+
+  @include vp-1023 {
+    line-height: 50px;
+    margin-bottom: 40px;
+  }
 }
 
 .services img {
@@ -59,7 +70,6 @@
   object-fit: none;
   position: absolute;
   top: 0;
-  z-index: -1;
 }
 
 .services a {
@@ -73,7 +83,6 @@
     position: absolute;
     top: 0;
     width: 100%;
-    z-index: -1;
   }
 }
 
@@ -94,5 +103,13 @@
 
   @include vp-1023 {
     min-height: 250px;
+  }
+}
+
+.services br {
+  display: none;
+
+  @include vp-1023 {
+    display: unset;
   }
 }

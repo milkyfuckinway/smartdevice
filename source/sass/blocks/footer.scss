@@ -4,14 +4,34 @@
 
 .footer__wrapper {
   display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
   justify-content: space-between;
   padding-bottom: 50px;
   padding-top: 50px;
+  width: 100%;
+
+  @include vp-1023 {
+    padding-bottom: 65px;
+  }
 }
 
 .footer__links {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
+
+  @include vp-1023 {
+    display: grid;
+    gap: 130px;
+    grid-template-columns: 220px 1fr;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
 }
 
 .footer__menu {
@@ -22,6 +42,12 @@
   display: grid;
   gap: 30px;
   grid-template-columns: repeat(2, 220px);
+  row-gap: 8px;
+
+  @include vp-1023 {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .footer__menu h2 {
@@ -32,7 +58,7 @@
   letter-spacing: 0.05em;
   line-height: 16px;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   margin-top: 5px;
   text-transform: uppercase;
 }
@@ -47,9 +73,10 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  row-gap: 10px;
+  row-gap: 8px;
   width: 100%;
 }
+
 .contacts {
   max-width: 345px;
 }

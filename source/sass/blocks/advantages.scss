@@ -1,71 +1,102 @@
-.advantages {
-  &__list {
-    display: grid;
-    gap: 30px;
-    grid-auto-rows: minmax(300px, 1fr);
-    grid-template-columns: 1fr 1fr;
-    list-style: none;
-    margin: 0;
-    padding: 120px 0;
+.advantages__wrapper {
+  padding-bottom: 120px;
+  padding-top: 120px;
 
-    @include vp-767 {
-      grid-template-columns: 1fr;
-    }
+  @include vp-1023 {
+    padding-bottom: 80px;
+    padding-top: 80px;
+  }
+}
+
+.advantages__list {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, minmax(300px, auto));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include vp-1023 {
+    grid-template-rows: repeat(2, minmax(360px, auto));
   }
 
-  &__item {
-    padding: 95px 45px 35px;
-    position: relative;
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+}
 
-    & svg {
-      fill: $light-blue;
-      position: absolute;
-      top: 40px;
-      z-index: 1;
-    }
+.advantages__item {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1px #ebebeb;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 45px 30px;
+  position: relative;
+
+  @include vp-1023 {
+    padding: 40px 30px 30px 45px;
+  }
+
+  @include hover-focus {
+    color: $text-white-alt;
 
     & h3 {
-      color: $light-blue;
-      font-family: $ff-robotocondensed;
-      font-size: 24px;
-      font-weight: 400;
-      line-height: 34px;
-      margin: 0;
-      margin-bottom: 15px;
+      color: $text-white-alt;
     }
 
-    & p {
-      font-size: 16px;
-      line-height: 22px;
-      margin: 0;
+    & svg {
+      fill: $text-white-alt;
     }
 
     &::before {
-      background-color: $light-blue;
-      content: "";
-      height: 100%;
-      left: 0;
-      position: absolute;
-      top: 0;
-      transition: 0.5s cubic-bezier(0, 1, 0, 1) width;
-      width: 5px;
-      z-index: -1;
-    }
-
-    @include hover-focus {
-      color: $text-white-alt;
-
-      h3 {
-        color: $text-white-alt;
-      }
-
-      & svg {
-        fill: $text-white-alt;
-      }
-
-      &::before {
-        width: 100%;
-      }
+      width: 100%;
     }
   }
+}
+
+.advantages__item svg {
+  fill: $light-blue;
+  margin-bottom: 22px;
+  position: relative;
+  z-index: 1;
+
+  @include vp-1023 {
+    margin-bottom: 16px;
+  }
+}
+
+.advantages__item h3 {
+  color: $light-blue;
+  font-family: $ff-robotocondensed;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 135%;
+  margin: 0;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+
+  @include vp-1023 {
+    margin-bottom: 10px;
+  }
+}
+
+.advantages__item p {
+  font-size: 16px;
+  line-height: 135%;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.advantages__item::before {
+  background-color: $light-blue;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: 0.5s cubic-bezier(0, 1, 0, 1) width;
+  width: 5px;
 }

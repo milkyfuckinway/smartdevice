@@ -1,27 +1,26 @@
 .feedback {
+  background-color: #00b3ff;
   min-height: 840px;
   position: relative;
   width: 100%;
 
-  &::after,
-  &::before {
+  @include vp-1023 {
+    min-height: 580px;
+  }
+
+  &::after {
+    background-color: rgba(4, 24, 39, 0.5);
+    clip-path: polygon(50.6% 0, 0 0, 0 100%);
     content: "";
     height: 100%;
     left: 0;
     position: absolute;
     top: 0;
     width: 100%;
-  }
 
-  &::after {
-    background-color: #00b3ff;
-    z-index: -2;
-  }
-
-  &::before {
-    background-color: rgba(4, 24, 39, 0.5);
-    clip-path: polygon(50.6% 0, 0 0, 0 100%);
-    z-index: -1;
+    @include vp-1023 {
+      display: none;
+    }
   }
 }
 
@@ -31,16 +30,34 @@
   grid-template-columns: 1fr 1fr;
   padding-bottom: 250px;
   padding-top: 170px;
+  position: relative;
+  z-index: 1;
+
+  @include vp-1023 {
+    display: flex;
+    gap: 0;
+    padding-bottom: 125px;
+    padding-top: 50px;
+  }
 }
 
 .feedback__image {
   margin-top: 76px;
+
+  @include vp-1023 {
+    display: none;
+  }
 }
 
 .feedback__content {
   display: flex;
   flex-direction: column;
   max-width: 580px;
+  width: 100%;
+
+  @include vp-1023 {
+    max-width: 100%;
+  }
 }
 
 .feedback__content h2 {
@@ -53,6 +70,11 @@
   margin-bottom: 15px;
   margin-left: -5px;
   min-height: 45px;
+
+  @include vp-1023 {
+    margin-bottom: 10px;
+    margin-left: 0;
+  }
 }
 
 .feedback__content p {
@@ -62,6 +84,10 @@
   line-height: 120%;
   margin: 0;
   margin-bottom: 35px;
+
+  @include vp-1023 {
+    margin-bottom: 25px;
+  }
 }
 
 .feedback__content form {
@@ -73,6 +99,11 @@
   grid-template-columns: 1fr 1fr;
   line-height: 22px;
   row-gap: 20px;
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .feedback__content form input:not([type="submit"]):not([type="checkbox"]),
@@ -84,6 +115,7 @@
   min-height: 50px;
   padding: 0;
   padding: 15px;
+
   &::placeholder {
     color: $text-white;
   }
@@ -94,6 +126,10 @@
   margin-bottom: 15px;
   min-height: 155px;
   padding: 25px 15px;
+
+  @include vp-1023 {
+    padding: 33px 15px;
+  }
 }
 
 .feedback__content form input[type="submit"] {
@@ -113,6 +149,12 @@
   padding: 10px 25px;
   text-decoration: none;
   text-transform: uppercase;
+
+  @include vp-1023 {
+    margin-right: 55px;
+    padding-bottom: 10px;
+    padding-top: 16px;
+  }
 }
 
 .feedback__content form label {
@@ -123,6 +165,12 @@
   opacity: 80%;
   padding-left: 36px;
   position: relative;
+
+  @include vp-1023 {
+    align-self: center;
+    margin-left: -10px;
+    margin-top: 8px;
+  }
 }
 
 .feedback__content form input[type="checkbox"] {

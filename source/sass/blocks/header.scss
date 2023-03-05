@@ -26,10 +26,20 @@
   min-height: 880px;
   object-fit: cover;
   width: 100%;
+
+  @include vp-1023 {
+    min-height: 640px;
+  }
 }
 
 .header__top {
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+  position: fixed;
+  z-index: 1000;
+
+  @include vp-1023 {
+    position: static;
+  }
 }
 
 .header__top-content {
@@ -38,6 +48,11 @@
   justify-content: space-between;
   padding-bottom: 35px;
   padding-top: 30px;
+
+  @include vp-1023 {
+    padding-bottom: 25px;
+    padding-top: 20px;
+  }
 }
 
 .header__list {
@@ -50,6 +65,7 @@
 
   @include vp-1023 {
     display: flex;
+    margin: 0;
     margin-left: auto;
   }
 }
@@ -79,24 +95,38 @@
 }
 
 .header__button {
-  background-color: transparent;
-  border: 1px solid $text-white-alt;
-  border-radius: 3px;
-  color: $text-white-alt;
-  font-family: inherit;
-  margin: 0 60px 0 0;
-  padding: 0;
-  text-transform: uppercase;
+  &--modal {
+    background-color: transparent;
+    border: 1px solid $text-white-alt;
+    border-radius: 3px;
+    color: $text-white-alt;
+    font-family: inherit;
+    margin: 0 60px 0 0;
+    padding: 0;
+    text-transform: uppercase;
 
-  @include vp-1023 {
-    display: none;
+    @include vp-1023 {
+      display: none;
+    }
+  }
+
+  &--anchor {
+    @include vp-1023 {
+      margin-left: 45px;
+      margin-top: auto;
+    }
   }
 }
 
 .header__bottom {
   display: flex;
   flex-direction: column;
+  margin-top: var(--header-height);
   position: relative;
+
+  @include vp-1023 {
+    margin-top: 0;
+  }
 }
 
 .header__bottom-content {
@@ -111,6 +141,13 @@
   padding-left: 157px;
   padding-right: 300px;
   padding-top: 185px;
+
+  @include vp-1023 {
+    gap: 0;
+    min-height: 540px;
+    padding-bottom: 205px;
+    padding-top: 80px;
+  }
 }
 
 .header__bottom h2 {
@@ -121,6 +158,11 @@
   line-height: 94px;
   margin: 0;
   text-transform: uppercase;
+
+  @include vp-1023 {
+    font-size: 64px;
+    line-height: 75px;
+  }
 }
 
 .header__bottom p {
@@ -131,4 +173,9 @@
   margin: 0;
   margin-bottom: 18px;
   text-transform: lowercase;
+
+  @include vp-1023 {
+    font-size: 22px;
+    margin-bottom: 0;
+  }
 }
