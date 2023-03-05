@@ -32,8 +32,11 @@ const optimizeSvg = () =>
                 {
                   name: 'removeUselessStrokeAndFill',
                   active: false,
-                }],
-            })]))
+                }
+              ],
+            })
+          ])
+      )
       .pipe(gulp.dest('build/img'));
 
 const optimizeJpg = () =>
@@ -52,7 +55,9 @@ const optimizePng = () =>
               strip: true,
               dithering: 1,
               quality: [0.8, 0.9],
-            })]))
+            })
+          ])
+      )
       .pipe(gulp.dest('build/img'));
 
 /*
@@ -70,7 +75,7 @@ const createWebp = () => {
   const root = '';
   return gulp
       .src(`source/img/${root}**/*.{png,jpg}`)
-      .pipe(webp({quality: 90}))
+      .pipe(webp({quality: 80}))
       .pipe(gulp.dest(`source/img/${root}`));
 };
 
