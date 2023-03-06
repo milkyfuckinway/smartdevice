@@ -1233,13 +1233,40 @@ button,
   color: #15ab07;
 }
 
+.button {
+  background-color: transparent;
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  height: auto;
+  letter-spacing: 0.05em;
+  line-height: 16px;
+  padding: 10px 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.button--transparent-white {
+  background-color: transparent;
+  border: 1px solid #f2f5f6;
+}
+.button--transparent-blue {
+  background-color: transparent;
+  border: 1px solid #00b2ff;
+  color: #00b2ff;
+  min-width: 180px;
+  padding: 14px 20px;
+}
+
 .header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
   position: relative;
-  z-index: 1;
+  z-index: 1000;
 }
 @supports (background-image: url("./../img/intro/desktop/intro-background-image.webp")) {
   .header {
@@ -1264,9 +1291,6 @@ button,
   }
 }
 @media (max-width: 1023px) {
-  .header {
-    background-position: -123px;
-  }
   @supports (background-image: url("./../img/intro/tablet/intro-background-image.webp")) {
     .header {
       background-image: url("./../img/intro/tablet/intro-background-image.webp");
@@ -1291,9 +1315,6 @@ button,
   }
 }
 @media (max-width: 767px) {
-  .header {
-    background-position: -229px;
-  }
   @supports (background-image: url("./../img/intro/mobile/intro-background-image.webp")) {
     .header {
       background-image: url("./../img/intro/mobile/intro-background-image.webp");
@@ -1362,6 +1383,12 @@ button,
     padding-top: 20px;
   }
 }
+@media (max-width: 767px) {
+  .header__top-content {
+    padding-bottom: 20px;
+    padding-top: 10px;
+  }
+}
 
 .header__list {
   -webkit-column-gap: 30px;
@@ -1389,6 +1416,12 @@ button,
     margin-bottom: 15px;
     margin-left: auto;
     margin-right: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .header__list {
+    margin: 0;
+    margin-right: 10px;
   }
 }
 
@@ -1428,7 +1461,7 @@ button,
   border: 1px solid #f2f5f6;
   border-radius: 3px;
   color: #f2f5f6;
-  font-family: inherit;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   margin: 0;
   margin-bottom: 5px;
   margin-right: 60px;
@@ -1442,10 +1475,30 @@ button,
     display: none;
   }
 }
+.header__button--anchor {
+  background-color: #00b2ff;
+  color: #f2f5f6;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21px;
+  min-height: 55px;
+  padding: 15px 27px;
+}
 @media (max-width: 1023px) {
   .header__button--anchor {
     margin-left: 45px;
     margin-top: auto;
+  }
+}
+@media (max-width: 767px) {
+  .header__button--anchor {
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0;
+    margin-top: 45px;
+    min-height: 40px;
+    padding: 10px 30px;
+    width: 100%;
   }
 }
 
@@ -1496,6 +1549,14 @@ button,
     padding-top: 80px;
   }
 }
+@media (max-width: 767px) {
+  .header__bottom-content {
+    min-height: 490px;
+    padding-bottom: 190px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
 
 .header__bottom h2 {
   font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -1510,6 +1571,13 @@ button,
   .header__bottom h2 {
     font-size: 64px;
     line-height: 75px;
+  }
+}
+@media (max-width: 767px) {
+  .header__bottom h2 {
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 8px;
   }
 }
 
@@ -1528,6 +1596,11 @@ button,
     margin-bottom: 0;
   }
 }
+@media (max-width: 767px) {
+  .header__bottom p {
+    font-size: 14px;
+  }
+}
 
 .logo {
   display: -webkit-box;
@@ -1537,41 +1610,11 @@ button,
       flex-shrink: 0;
   gap: 15px;
 }
-
-.button {
-  background-color: transparent;
-  border: 0;
-  border-radius: 3px;
-  cursor: pointer;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-  font-size: 14px;
-  font-weight: bold;
-  height: auto;
-  letter-spacing: 0.05em;
-  line-height: 16px;
-  padding: 10px 15px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-.button--transparent-white {
-  background-color: transparent;
-  border: 1px solid #f2f5f6;
-}
-.button--blue {
-  background-color: #00b2ff;
-  color: #f2f5f6;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 21px;
-  min-height: 55px;
-  padding: 15px 27px;
-}
-.button--transparent-blue {
-  background-color: transparent;
-  border: 1px solid #00b2ff;
-  color: #00b2ff;
-  min-width: 180px;
-  padding: 14px 20px;
+@media (max-width: 767px) {
+  .logo {
+    height: 35px;
+    width: 35px;
+  }
 }
 
 .wrapper {
@@ -1589,6 +1632,12 @@ button,
   .advantages__wrapper {
     padding-bottom: 80px;
     padding-top: 80px;
+  }
+}
+@media (max-width: 767px) {
+  .advantages__wrapper {
+    padding-bottom: 50px;
+    padding-top: 50px;
   }
 }
 
@@ -1614,6 +1663,8 @@ button,
   .advantages__list {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
   }
 }
 
@@ -1634,6 +1685,15 @@ button,
 @media (max-width: 1023px) {
   .advantages__item {
     padding: 40px 30px 30px 45px;
+  }
+}
+@media (max-width: 767px) {
+  .advantages__item {
+    min-height: 340px;
+    padding: 30px 30px 35px 30px;
+  }
+  .advantages__item:nth-child(n+3) {
+    min-height: 325px;
   }
 }
 @media (hover: hover) {
@@ -1674,6 +1734,12 @@ button,
     margin-bottom: 16px;
   }
 }
+@media (max-width: 767px) {
+  .advantages__item svg {
+    height: 30px;
+    width: 30px;
+  }
+}
 
 .advantages__item h3 {
   color: #00b2ff;
@@ -1691,6 +1757,12 @@ button,
     margin-bottom: 10px;
   }
 }
+@media (max-width: 767px) {
+  .advantages__item h3 {
+    font-size: 20px;
+    line-height: 155%;
+  }
+}
 
 .advantages__item p {
   font-size: 16px;
@@ -1698,6 +1770,11 @@ button,
   margin: 0;
   position: relative;
   z-index: 1;
+}
+@media (max-width: 767px) {
+  .advantages__item p {
+    font-size: 14px;
+  }
 }
 
 .advantages__item::before {
@@ -1784,6 +1861,13 @@ button,
     margin-bottom: 15px;
   }
 }
+@media (max-width: 767px) {
+  .about h2 {
+    font-size: 28px;
+    line-height: 140%;
+    margin-bottom: 10px;
+  }
+}
 
 .about p {
   font-size: 16px;
@@ -1794,7 +1878,7 @@ button,
 @media (max-width: 767px) {
   .about p {
     font-size: 14px;
-    line-height: 19px;
+    line-height: 135%;
   }
 }
 
@@ -1808,7 +1892,9 @@ button,
 }
 @media (max-width: 767px) {
   .about__button {
-    margin-top: 20px;
+    margin-top: 10px;
+    min-width: 160px;
+    padding: 9px 13px;
   }
 }
 

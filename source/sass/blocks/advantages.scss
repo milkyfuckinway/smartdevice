@@ -6,6 +6,11 @@
     padding-bottom: 80px;
     padding-top: 80px;
   }
+
+  @include vp-767 {
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
 }
 
 .advantages__list {
@@ -23,6 +28,7 @@
 
   @include vp-767 {
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
 }
 
@@ -36,6 +42,15 @@
 
   @include vp-1023 {
     padding: 40px 30px 30px 45px;
+  }
+
+  @include vp-767 {
+    min-height: 340px;
+    padding: 30px 30px 35px 30px;
+
+    &:nth-child(n + 3) {
+      min-height: 325px;
+    }
   }
 
   @include hover-focus {
@@ -64,6 +79,11 @@
   @include vp-1023 {
     margin-bottom: 16px;
   }
+
+  @include vp-767 {
+    height: 30px;
+    width: 30px;
+  }
 }
 
 .advantages__item h3 {
@@ -80,6 +100,11 @@
   @include vp-1023 {
     margin-bottom: 10px;
   }
+
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 155%;
+  }
 }
 
 .advantages__item p {
@@ -88,6 +113,10 @@
   margin: 0;
   position: relative;
   z-index: 1;
+
+  @include vp-767 {
+    font-size: 14px;
+  }
 }
 
 .advantages__item::before {

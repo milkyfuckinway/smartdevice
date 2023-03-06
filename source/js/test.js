@@ -1,3 +1,15 @@
+const buttonAnchor = document.querySelector('.header__button--anchor');
+
+const anchorButtonText = () => {
+  if (window.innerWidth >= 768) {
+    buttonAnchor.textContent = 'Получить бесплатную консультацию';
+  } else {
+    buttonAnchor.textContent = 'бесплатная консультация';
+  }
+};
+
+anchorButtonText();
+
 const testFunciton = () => {
   const textButton = document.querySelector('.button--transparent-blue');
   const textContainer = document.querySelector('.about__text');
@@ -10,6 +22,7 @@ const testFunciton = () => {
     document.documentElement.style.setProperty('--displayed-text-height', `${displayedText.offsetHeight}px`);
     document.documentElement.style.setProperty('--hidden-text-height', `${hiddenText.offsetHeight}px`);
     document.documentElement.style.setProperty('--full-text-height', `${displayedText.offsetHeight + hiddenText.offsetHeight}px`);
+    anchorButtonText();
   };
 
   setRootStyles();
