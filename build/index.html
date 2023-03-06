@@ -18,7 +18,7 @@
       <header class="header">
         <div class="header__top container">
           <div class="header__top-content container__wrapper">
-            <div class="header__logo logo">
+            <div class="header__logo logo logo--header">
               <a class="logo__link" href="#">
                 <picture>
                   <source media="(max-width: 767px)" width="55" height="55" srcset="./img/svg/logo-short.svg">
@@ -186,53 +186,55 @@
               </li>
             </ul>
           </div>
-          <div class="footer__links">
-            <div class="footer__menu links">
-              <h2>Разделы сайта</h2>
-              <div class="footer__navigation">
-                <ul class="footer__list">
-                  <li class="footer__item">
+          <div class="footer__accordion accordion" data-accordion="parent" data-destroy="(max-width: 767px)" data-single>
+            <div class="accordion__section" data-accordion="element">
+              <button class="accordion__button" data-accordion="button" type="button">Разделы сайта</button>
+              <div class="accordion__content accordion__content--wide" data-accordion="content">
+                <ul>
+                  <li>
                     <a href="#">О Компании</a>
                   </li>
-                  <li class="footer__item">
+                  <li>
                     <a href="#">Продукты</a>
                   </li>
-                  <li class="footer__item">
+                  <li>
                     <a href="#">Производство печатных плат</a>
                   </li>
-                  <li class="footer__item">
+                  <li>
                     <a href="#">Монтаж печатных плат</a>
                   </li>
                 </ul>
-                <ul class="footer__list">
-                  <li class="footer__item">
+                <ul>
+                  <li>
                     <a href="#">Комплектующие</a>
                   </li>
-                  <li class="footer__item">
+                  <li>
                     <a href="#">Доставка</a>
                   </li>
-                  <li class="footer__item">
+                  <li>
                     <a href="#">Контакты</a>
                   </li>
                 </ul>
               </div>
             </div>
-            <div class="footer__menu contacts">
-              <h2>Наш офис</h2>
-              <ul class="footer__list">
-                <li class="footer__item">
-                  <a href="https://goo.gl/maps/KDxpRmWTAMP8CauD7">г. Мытищи, Олимпийский проспект, д.10</a>
-                </li>
-                <li class="footer__item">
-                  <a href="tel:+74955894050">+7 (495) 589-40-50</a>
-                </li>
-                <li class="footer__item">
-                  <a href="tel:+79253895829">+7 (925) 389-58-29</a>
-                </li>
-                <li class="footer__item">
-                  <a href="tel:+79253647813">+7 (925) 364-78-13</a>
-                </li>
-              </ul>
+            <div class="accordion__section" data-accordion="element">
+              <button class="accordion__button" data-accordion="button" type="button">Наш офис</button>
+              <div class="accordion__content" data-accordion="content">
+                <ul>
+                  <li>
+                    <a href="https://goo.gl/maps/KDxpRmWTAMP8CauD7">г. Мытищи, Олимпийский проспект, д.10</a>
+                  </li>
+                  <li>
+                    <a href="tel:+74955894050">+7 (495) 589-40-50</a>
+                  </li>
+                  <li>
+                    <a href="tel:+79253895829">+7 (925) 389-58-29</a>
+                  </li>
+                  <li>
+                    <a href="tel:+79253647813">+7 (925) 364-78-13</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -269,7 +271,7 @@
         </div>
     </div> -->
 
-      <!-- <script src="js/vendor.min.js"></script> -->
+      <script src="js/vendor.min.js"></script>
       <script src="js/main.min.js"></script>
     </div>
   </body>

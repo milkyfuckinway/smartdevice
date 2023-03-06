@@ -3,11 +3,11 @@
 
 @import "vendor/normalize";
 // Swiper 7.4.1
+@import "vendor/data-accordion.scss";
 // @import "vendor/swiper";
 
 // Global
 // ---------------------------------
-
 @import "variables";
 @import "mixins";
 @import "root";
@@ -33,6 +33,7 @@
 @import "blocks/services";
 @import "blocks/feedback";
 @import "blocks/footer";
+@import "blocks/accordion";
 @import "blocks/social";
 
 // ---------------------------------

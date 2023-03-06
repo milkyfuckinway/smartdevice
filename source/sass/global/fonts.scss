@@ -2,7 +2,7 @@
   font-display: swap;
   font-family: "PT Mono";
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   src: url("../../fonts/ptmono-regular.woff2") format("woff2"), url("../../fonts/ptmono-regular.woff") format("woff");
 }
 
@@ -10,7 +10,7 @@
   font-display: swap;
   font-family: "Roboto Condensed";
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   src: url("../../fonts/robotocondensed-regular.woff2") format("woff2"), url("../../fonts/robotocondensed-regular.woff") format("woff");
 }
 
@@ -18,6 +18,6 @@
   font-display: swap;
   font-family: "Roboto Condensed";
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   src: url("../../fonts/robotocondensed-bold.woff2") format("woff2"), url("../../fonts/robotocondensed-bold.woff") format("woff");
 }

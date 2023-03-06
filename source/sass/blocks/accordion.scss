@@ -1,0 +1,155 @@
+.accordion {
+  display: flex;
+  gap: 30px;
+
+  @include vp-767 {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 35px;
+    width: 100%;
+  }
+}
+
+.accordion__section {
+  color: $text-white;
+
+  @include vp-1023 {
+    width: 50%;
+  }
+
+  @include vp-767 {
+    padding-left: 25px;
+    padding-right: 25px;
+    position: relative;
+    transition: 0.3s padding-bottom;
+    width: 100%;
+
+    &::before {
+      background-color: #ffffff;
+      content: "";
+      height: 1px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+
+    &:last-child::after {
+      background-color: #ffffff;
+      bottom: 0;
+      content: "";
+      height: 1px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+  }
+}
+
+.accordion__button {
+  background-color: transparent;
+  border: 0;
+  color: inherit;
+  display: flex;
+  font-family: $ff-robotocondensed;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  line-height: 16px;
+  margin: 0;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  min-height: 20px;
+  padding: 0;
+  text-align: left;
+  text-transform: uppercase;
+  width: 100%;
+
+  @include vp-767 {
+    align-items: center;
+    cursor: pointer;
+    margin: 0;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    min-height: 20px;
+
+    &::after,
+    &::before {
+      background-color: #ffffff;
+      content: "";
+      height: 1px;
+      position: absolute;
+      right: 26px;
+      width: 15px;
+    }
+
+    &::before {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.accordion__content {
+  gap: 30px;
+  row-gap: 8px;
+
+  @include vp-1023 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.accordion__section.is-active {
+  padding-bottom: 25px;
+}
+
+.accordion__content ul {
+  column-gap: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 16px;
+  line-height: 135%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  row-gap: 10px;
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.accordion__content--wide {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+
+  @include vp-1023 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.accordion__content li {
+  line-height: 20px;
+  max-width: 345px;
+
+  @include vp-767 {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.accordion__content--wide li {
+  max-width: 220px;
+
+  @include vp-767 {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.accordion__content a {
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  font-size: 14px;
+  line-height: 135%;
+  width: 100%;
+}
