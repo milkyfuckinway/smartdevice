@@ -10,6 +10,11 @@
     padding-bottom: 75px;
     padding-top: 55px;
   }
+
+  @include vp-767 {
+    padding-bottom: 86px;
+    padding-top: 50px;
+  }
 }
 
 .services__list {
@@ -29,24 +34,6 @@
   }
 }
 
-.services p {
-  font-family: $ff-robotocondensed;
-  font-size: 20px;
-  line-height: 30px;
-  margin: 0;
-  padding: 50px 40px;
-  position: relative;
-  width: 70%;
-  z-index: 1;
-
-  @include vp-1023 {
-    font-size: 20px;
-    line-height: 30px;
-    padding: 40px 45px;
-    width: 40%;
-  }
-}
-
 .services h2 {
   color: $text-white;
   display: flex;
@@ -62,15 +49,17 @@
     line-height: 50px;
     margin-bottom: 40px;
   }
-}
 
-.services a {
-  color: $text-white;
-  margin: 0;
+  @include vp-767 {
+    font-size: 28px;
+    line-height: 140%;
+    margin-bottom: 26px;
+  }
 }
 
 .services__item {
   background-size: cover;
+  display: flex;
   position: relative;
 
   &::before {
@@ -95,6 +84,13 @@
     position: absolute;
     right: 0;
     width: 60px;
+
+    @include vp-767 {
+      background-position: calc(50% + 2px);
+      background-size: 4px;
+      height: 40px;
+      width: 40px;
+    }
   }
 
   &--1 {
@@ -140,10 +136,40 @@
   }
 }
 
-.services br {
+.services a {
+  color: $text-white;
+  font-family: $ff-robotocondensed;
+  font-size: 20px;
+  line-height: 30px;
+  margin: 0;
+  padding: 46px 40px;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+
+  @include vp-1023 {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 36px 45px;
+  }
+
+  @include vp-767 {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 25px 30px;
+  }
+}
+
+.services__br--tablet {
   display: none;
 
   @include vp-1023 {
-    display: unset;
+    display: inline;
+  }
+}
+
+.services__br--desktop {
+  @include vp-1023 {
+    display: none;
   }
 }

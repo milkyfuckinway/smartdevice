@@ -1800,7 +1800,7 @@ button,
 @media (max-width: 1023px) {
   .about__container {
     gap: 30px;
-    padding-bottom: 78px;
+    padding-bottom: 79px;
   }
 }
 
@@ -1912,6 +1912,12 @@ button,
     padding-top: 55px;
   }
 }
+@media (max-width: 767px) {
+  .services__container {
+    padding-bottom: 86px;
+    padding-top: 50px;
+  }
+}
 
 .services__list {
   display: -ms-grid;
@@ -1941,25 +1947,6 @@ button,
   }
 }
 
-.services p {
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-  font-size: 20px;
-  line-height: 30px;
-  margin: 0;
-  padding: 50px 40px;
-  position: relative;
-  width: 70%;
-  z-index: 1;
-}
-@media (max-width: 1023px) {
-  .services p {
-    font-size: 20px;
-    line-height: 30px;
-    padding: 40px 45px;
-    width: 40%;
-  }
-}
-
 .services h2 {
   color: #ffffff;
   display: -webkit-box;
@@ -1979,14 +1966,19 @@ button,
     margin-bottom: 40px;
   }
 }
-
-.services a {
-  color: #ffffff;
-  margin: 0;
+@media (max-width: 767px) {
+  .services h2 {
+    font-size: 28px;
+    line-height: 140%;
+    margin-bottom: 26px;
+  }
 }
 
 .services__item {
   background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
 }
 .services__item::before {
@@ -2010,6 +2002,14 @@ button,
   position: absolute;
   right: 0;
   width: 60px;
+}
+@media (max-width: 767px) {
+  .services__item::after {
+    background-position: calc(50% + 2px);
+    background-size: 4px;
+    height: 40px;
+    width: 40px;
+  }
 }
 @supports (background-image: url("./../img/services/desktop/services-1.webp")) {
   .services__item--1 {
@@ -2225,12 +2225,44 @@ button,
   }
 }
 
-.services br {
+.services a {
+  color: #ffffff;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  margin: 0;
+  padding: 46px 40px;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+@media (max-width: 1023px) {
+  .services a {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 36px 45px;
+  }
+}
+@media (max-width: 767px) {
+  .services a {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 25px 30px;
+  }
+}
+
+.services__br--tablet {
   display: none;
 }
 @media (max-width: 1023px) {
-  .services br {
-    display: unset;
+  .services__br--tablet {
+    display: inline;
+  }
+}
+
+@media (max-width: 1023px) {
+  .services__br--desktop {
+    display: none;
   }
 }
 

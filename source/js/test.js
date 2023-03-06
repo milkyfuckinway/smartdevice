@@ -1,3 +1,5 @@
+const nonBrSpace = String.fromCharCode(160);
+
 const buttonAnchor = document.querySelector('.header__button--anchor');
 
 const anchorButtonText = () => {
@@ -9,6 +11,19 @@ const anchorButtonText = () => {
 };
 
 anchorButtonText();
+
+const services = document.querySelector('.services__container');
+const servicesHeading = services.querySelector('h2');
+
+const servicesHeadingText = () => {
+  if (window.innerWidth >= 768) {
+    servicesHeading.textContent = 'Smart Device предлагает следующие товары и услуги';
+  } else {
+    servicesHeading.textContent = `Товары и услуги Smart${nonBrSpace}Device`;
+  }
+};
+
+servicesHeadingText();
 
 const testFunciton = () => {
   const textButton = document.querySelector('.button--transparent-blue');
@@ -23,6 +38,7 @@ const testFunciton = () => {
     document.documentElement.style.setProperty('--hidden-text-height', `${hiddenText.offsetHeight}px`);
     document.documentElement.style.setProperty('--full-text-height', `${displayedText.offsetHeight + hiddenText.offsetHeight}px`);
     anchorButtonText();
+    servicesHeadingText();
   };
 
   setRootStyles();
