@@ -19,14 +19,15 @@
 // Blocks
 // ---------------------------------
 
-@import "blocks/btn";
-@import "blocks/modal";
-@import "blocks/custom-input";
-@import "blocks/custom-toggle";
-@import "blocks/custom-select";
-@import "blocks/button";
+// @import "default-blocks/btn";
+// @import "default-blocks/modal";
+// @import "default-blocks/custom-input";
+// @import "default-blocks/custom-toggle";
+// @import "default-blocks/custom-select";
+
+@import "components/button";
+@import "components/logo";
 @import "blocks/header";
-@import "blocks/logo";
 @import "blocks/wrapper";
 @import "blocks/advantages";
 @import "blocks/about";

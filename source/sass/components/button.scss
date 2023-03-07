@@ -15,13 +15,13 @@
 
   &--transparent-white {
     background-color: transparent;
-    border: 1px solid $text-white-alt;
+    border: 1px solid $color-default-white-alt;
   }
 
   &--transparent-blue {
     background-color: transparent;
-    border: 1px solid $light-blue;
-    color: $light-blue;
+    border: 1px solid $color-deep-sky-blue;
+    color: $color-deep-sky-blue;
     min-width: 180px;
     padding: 14px 20px;
   }

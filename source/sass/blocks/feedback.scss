@@ -1,5 +1,5 @@
 .feedback {
-  background-color: #00b3ff;
+  background-color: $color-deep-sky-blue;
   min-height: 840px;
   position: relative;
   width: 100%;
@@ -9,7 +9,7 @@
   }
 
   &::after {
-    background-color: rgba(4, 24, 39, 0.5);
+    background-color: $color-black-pearl-50;
     clip-path: polygon(50.6% 0, 0 0, 0 100%);
     content: "";
     height: 100%;
@@ -69,7 +69,7 @@
 }
 
 .feedback__content h2 {
-  color: $text-white;
+  color: $color-default-white;
   font-family: $ff-robotocondensed;
   font-size: 36px;
   font-weight: 400;
@@ -92,7 +92,7 @@
 }
 
 .feedback__content p {
-  color: $text-white;
+  color: $color-default-white;
   font-size: 16px;
   font-weight: 400;
   line-height: 120%;
@@ -111,13 +111,13 @@
 }
 
 .feedback__content form {
-  color: $text-white;
+  color: $color-default-white;
   column-gap: 30px;
   display: grid;
   font-family: $ff-ptmono;
   font-size: 16px;
   grid-template-columns: 1fr 1fr;
-  line-height: 22px;
+  line-height: 120%;
   row-gap: 20px;
 
   @include vp-767 {
@@ -129,7 +129,7 @@
 
 .feedback__content form input:not([type="submit"]):not([type="checkbox"]),
 .feedback__content form textarea {
-  background-color: rgba(4, 20, 39, 0.15);
+  background-color: $color-black-pearl-15;
   border: 0;
   color: inherit;
   margin: 0;
@@ -138,7 +138,7 @@
   padding: 15px;
 
   &::placeholder {
-    color: $text-white;
+    color: $color-default-white;
   }
 
   @include vp-767 {
@@ -164,10 +164,10 @@
 }
 
 .feedback__content form input[type="submit"] {
-  background-color: $dark-blue;
+  background-color: $color-black-pearl;
   border: 0;
   border-radius: 3px;
-  color: $text-white;
+  color: $color-default-white;
   cursor: pointer;
   font-family: $ff-robotocondensed;
   font-size: 16px;
@@ -200,7 +200,7 @@
     display: flex;
     font-size: 14px;
     gap: 10px;
-    line-height: 14px;
+    line-height: 100%;
     margin-left: 10px;
     opacity: 80%;
     position: relative;
@@ -215,7 +215,7 @@
     }
 
     &::before {
-      border: 1px solid #ffffff;
+      border: 1px solid $color-default-white;
     }
 
     &::after {

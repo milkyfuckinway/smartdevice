@@ -22,7 +22,7 @@
 
     input,
     textarea {
-      border: 2px solid rgba(#000000, 0.2);
+      border: 2px solid rgba($color-default-black, 0.2);
       border-radius: 5px;
       flex-grow: 1;
       margin-left: auto;
@@ -38,11 +38,11 @@
       }
 
       &:hover {
-        border: 2px solid rgba(#000000, 0.5);
+        border: 2px solid rgba($color-default-black, 0.5);
       }
 
       &:focus {
-        border: 2px solid rgba(#000000, 0.8);
+        border: 2px solid rgba($color-default-black, 0.8);
       }
     }
   }

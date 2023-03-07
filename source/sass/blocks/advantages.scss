@@ -34,7 +34,7 @@
 
 .advantages__item {
   background-color: transparent;
-  box-shadow: inset 0 0 0 1px #ebebeb;
+  box-shadow: inset 0 0 0 1px $color-whisper;
   display: flex;
   flex-direction: column;
   padding: 40px 45px 30px;
@@ -54,14 +54,14 @@
   }
 
   @include hover-focus {
-    color: $text-white-alt;
+    color: $color-default-white-alt;
 
     & h3 {
-      color: $text-white-alt;
+      color: $color-default-white-alt;
     }
 
     & svg {
-      fill: $text-white-alt;
+      fill: $color-default-white-alt;
     }
 
     &::before {
@@ -71,7 +71,7 @@
 }
 
 .advantages__item svg {
-  fill: $light-blue;
+  fill: $color-deep-sky-blue;
   margin-bottom: 22px;
   position: relative;
   z-index: 1;
@@ -87,7 +87,7 @@
 }
 
 .advantages__item h3 {
-  color: $light-blue;
+  color: $color-deep-sky-blue;
   font-family: $ff-robotocondensed;
   font-size: 24px;
   font-weight: 400;
@@ -120,7 +120,7 @@
 }
 
 .advantages__item::before {
-  background-color: $light-blue;
+  background-color: $color-deep-sky-blue;
   content: "";
   height: 100%;
   left: 0;
