@@ -3,26 +3,24 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {testFunciton} from './test';
 import {initAccordions} from './modules/accordion/init-accordion';
-
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
   // Utils
   // ---------------------------------
-
   iosVhFix();
   // Modules
   // ---------------------------------
 
   testFunciton();
   initAccordions();
+
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
     const form = new Form();
     window.form = form;
-    form.init();
   });
 });
 

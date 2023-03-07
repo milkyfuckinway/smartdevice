@@ -193,60 +193,56 @@
 
 .feedback__content form input[type="checkbox"] {
   @include visually-hidden;
+}
 
-  & + label {
-    align-items: center;
-    align-self: flex-end;
-    display: flex;
-    font-size: 14px;
-    gap: 10px;
-    line-height: 100%;
-    margin-left: 10px;
-    opacity: 80%;
-    position: relative;
+.feedback__content form input[type="checkbox"] + label {
+  align-items: center;
+  align-self: flex-end;
+  display: flex;
+  font-size: 14px;
+  gap: 10px;
+  line-height: 120%;
+  margin-left: 10px;
+  opacity: 80%;
+  position: relative;
 
-    &::before,
-    &::after {
-      border-radius: 2px;
-      content: "";
-      flex-shrink: 0;
-      height: 15px;
-      width: 15px;
-    }
-
-    &::before {
-      border: 1px solid $color-default-white;
-    }
-
-    &::after {
-      background-image: url("../../img/svg/checkmark.svg");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 0;
-      left: 0px;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      transition: 0.2s background-size;
-    }
+  &::before,
+  &::after {
+    border-radius: 2px;
+    content: "";
+    flex-shrink: 0;
+    height: 15px;
+    width: 15px;
   }
 
-  &:checked + label {
-    &::after {
-      background-size: 10px;
-    }
+  &::before {
+    border: 1px solid $color-default-white;
+  }
+
+  &::after {
+    background-image: url("../../img/svg/checkmark.svg");
+    background-position: 40% center;
+    background-repeat: no-repeat;
+    background-size: 0;
+    left: 0px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.2s background-size;
   }
 
   @include vp-1023 {
-    & + label {
-      margin-bottom: 5px;
-      margin-left: 0;
-    }
+    margin-left: 0;
   }
+
   @include vp-767 {
-    & + label {
-      align-self: auto;
-      margin: 5px;
-    }
+    align-self: auto;
+    margin: 5px;
+  }
+}
+
+.feedback__content form input[type="checkbox"]:checked + label {
+  &::after {
+    background-size: 10px;
   }
 }

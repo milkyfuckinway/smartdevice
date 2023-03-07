@@ -7,7 +7,7 @@
   padding-top: 70px;
 
   @include vp-1023 {
-    padding-bottom: 75px;
+    padding-bottom: 74px;
     padding-top: 55px;
   }
 
@@ -147,13 +147,12 @@
   z-index: 1;
 
   @include vp-1023 {
-    font-size: 20px;
     padding: 36px 45px;
   }
 
   @include vp-767 {
     font-size: 18px;
-    padding: 25px 30px;
+    padding: 30px;
   }
 }
 

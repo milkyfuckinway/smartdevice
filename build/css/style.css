@@ -857,7 +857,7 @@ button,
   .header__button--anchor {
     font-size: 14px;
     margin: 0;
-    margin-top: 45px;
+    margin-top: 44px;
     min-height: 40px;
     padding: 10px 30px;
     width: 100%;
@@ -896,27 +896,19 @@ button,
   gap: 40px;
   margin-top: auto;
   min-height: 760px;
-  padding-bottom: 280px;
-  padding-left: 157px;
-  padding-right: 300px;
-  padding-top: 190px;
+  padding: 190px 300px 260px 157px;
 }
 @media (max-width: 1023px) {
   .header__bottom-content {
     gap: 0;
     min-height: 540px;
-    padding-bottom: 205px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 80px;
+    padding: 85px 50px 205px 50px;
   }
 }
 @media (max-width: 767px) {
   .header__bottom-content {
     min-height: 490px;
-    padding-bottom: 190px;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: 80px 25px 190px 25px;
   }
 }
 
@@ -932,12 +924,14 @@ button,
 @media (max-width: 1023px) {
   .header__bottom h2 {
     font-size: 64px;
+    margin-bottom: 6px;
   }
 }
 @media (max-width: 767px) {
   .header__bottom h2 {
     font-size: 36px;
-    margin-bottom: 8px;
+    line-height: 120%;
+    margin-bottom: 6px;
   }
 }
 
@@ -947,11 +941,6 @@ button,
   line-height: 155%;
   margin: 0;
   text-transform: lowercase;
-}
-@media (max-width: 1023px) {
-  .header__bottom p {
-    font-size: 22px;
-  }
 }
 @media (max-width: 767px) {
   .header__bottom p {
@@ -1141,7 +1130,12 @@ button,
 @media (max-width: 1023px) {
   .about__container {
     gap: 30px;
-    padding-bottom: 79px;
+    padding-bottom: 78px;
+  }
+}
+@media (max-width: 767px) {
+  .about__container {
+    padding-bottom: 80px;
   }
 }
 
@@ -1204,8 +1198,7 @@ button,
 @media (max-width: 767px) {
   .about h2 {
     font-size: 28px;
-    line-height: 140.63%;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 }
 
@@ -1248,7 +1241,7 @@ button,
 }
 @media (max-width: 1023px) {
   .services__container {
-    padding-bottom: 75px;
+    padding-bottom: 74px;
     padding-top: 55px;
   }
 }
@@ -1577,14 +1570,13 @@ button,
 }
 @media (max-width: 1023px) {
   .services a {
-    font-size: 20px;
     padding: 36px 45px;
   }
 }
 @media (max-width: 767px) {
   .services a {
     font-size: 18px;
-    padding: 25px 30px;
+    padding: 30px;
   }
 }
 
@@ -1861,6 +1853,7 @@ button,
   white-space: nowrap;
   width: 1px;
 }
+
 .feedback__content form input[type=checkbox] + label {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1872,7 +1865,7 @@ button,
   display: flex;
   font-size: 14px;
   gap: 10px;
-  line-height: 100%;
+  line-height: 120%;
   margin-left: 10px;
   opacity: 80%;
   position: relative;
@@ -1890,7 +1883,7 @@ button,
 }
 .feedback__content form input[type=checkbox] + label::after {
   background-image: url("../../img/svg/checkmark.svg");
-  background-position: center;
+  background-position: 40% center;
   background-repeat: no-repeat;
   background-size: 0;
   left: 0px;
@@ -1903,12 +1896,8 @@ button,
   -o-transition: 0.2s background-size;
   transition: 0.2s background-size;
 }
-.feedback__content form input[type=checkbox]:checked + label::after {
-  background-size: 10px;
-}
 @media (max-width: 1023px) {
   .feedback__content form input[type=checkbox] + label {
-    margin-bottom: 5px;
     margin-left: 0;
   }
 }
@@ -1919,6 +1908,10 @@ button,
         align-self: auto;
     margin: 5px;
   }
+}
+
+.feedback__content form input[type=checkbox]:checked + label::after {
+  background-size: 10px;
 }
 
 .footer {
@@ -2008,6 +2001,9 @@ button,
 }
 
 .accordion__button {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: transparent;
   border: 0;
   color: inherit;
@@ -2068,7 +2064,7 @@ button,
 }
 
 .accordion__section.is-active {
-  padding-bottom: 25px;
+  padding-bottom: 20px;
 }
 
 .accordion__content ul {
@@ -2089,10 +2085,11 @@ button,
   list-style: none;
   margin: 0;
   padding: 0;
-  row-gap: 10px;
+  row-gap: 8px;
 }
 @media (max-width: 767px) {
   .accordion__content ul {
+    row-gap: 10px;
     width: 100%;
   }
 }
@@ -2141,6 +2138,18 @@ button,
   font-size: 16px;
   line-height: 135%;
   width: 100%;
+}
+@media (max-width: 767px) {
+  .accordion__content a {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .accordion__content a[data-link=address] {
+    margin-bottom: 5px;
+  }
 }
 
 .social {

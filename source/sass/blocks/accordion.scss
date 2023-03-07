@@ -46,6 +46,7 @@
 }
 
 .accordion__button {
+  align-items: center;
   background-color: transparent;
   border: 0;
   color: inherit;
@@ -98,7 +99,7 @@
 }
 
 .accordion__section.is-active {
-  padding-bottom: 25px;
+  padding-bottom: 20px;
 }
 
 .accordion__content ul {
@@ -111,8 +112,10 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  row-gap: 10px;
+  row-gap: 8px;
+
   @include vp-767 {
+    row-gap: 10px;
     width: 100%;
   }
 }
@@ -151,4 +154,15 @@
   font-size: 16px;
   line-height: 135%;
   width: 100%;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.accordion__content a[data-link="address"] {
+  @include vp-767 {
+    margin-bottom: 5px;
+  }
 }
