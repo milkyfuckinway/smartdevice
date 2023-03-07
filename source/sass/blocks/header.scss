@@ -29,7 +29,8 @@
 
 .header__top {
   background: $header-top;
-  position: fixed;
+  position: sticky;
+  top: 0;
   z-index: 1000;
 
   @include vp-1023 {
@@ -153,7 +154,6 @@
 .header__bottom {
   display: flex;
   flex-direction: column;
-  margin-top: var(--header-height);
   position: relative;
 
   @include vp-1023 {

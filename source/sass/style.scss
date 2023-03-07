@@ -19,11 +19,11 @@
 // Blocks
 // ---------------------------------
 
-// @import "default-blocks/btn";
-// @import "default-blocks/modal";
-// @import "default-blocks/custom-input";
-// @import "default-blocks/custom-toggle";
-// @import "default-blocks/custom-select";
+@import "default-blocks/btn";
+@import "default-blocks/modal";
+@import "default-blocks/custom-input";
+@import "default-blocks/custom-toggle";
+@import "default-blocks/custom-select";
 
 @import "components/button";
 @import "components/logo";
@@ -32,6 +32,7 @@
 @import "blocks/advantages";
 @import "blocks/about";
 @import "blocks/services";
+@import "blocks/form";
 @import "blocks/feedback";
 @import "blocks/footer";
 @import "blocks/accordion";
