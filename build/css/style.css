@@ -604,7 +604,7 @@ button,
 }
 
 .modal {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(3, 16, 27, 0.7);
   bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2286,9 +2286,14 @@ button,
     max-width: 100%;
   }
 }
-
 .form--modal {
   background-color: #00b2ff;
+  border-radius: 3px;
+  max-width: 500px;
+  min-height: 610px;
+  -webkit-transform: translate(-8px, 30px);
+      -ms-transform: translate(-8px, 30px);
+          transform: translate(-8px, 30px);
 }
 
 .form h2 {
@@ -2316,6 +2321,14 @@ button,
   }
 }
 
+.form--modal h2 {
+  font-size: 30px;
+  line-height: 100%;
+  margin: 0;
+  margin-bottom: 15px;
+  min-height: auto;
+}
+
 .form p {
   color: #ffffff;
   font-size: 16px;
@@ -2335,6 +2348,11 @@ button,
     line-height: 134.4%;
     margin-bottom: 34px;
   }
+}
+
+.form--modal p {
+  line-height: 140%;
+  margin-bottom: 35px;
 }
 
 .form form {
@@ -2364,6 +2382,20 @@ button,
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+
+.form--modal form {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
 }
 
 .form form input:not([type=submit]):not([type=checkbox]),
@@ -2420,6 +2452,10 @@ button,
   }
 }
 
+.form--modal form textarea {
+  margin-bottom: 0;
+}
+
 .form form input[type=submit] {
   background-color: #041827;
   border: 0;
@@ -2448,6 +2484,11 @@ button,
     margin: 0;
     width: 100%;
   }
+}
+
+.form--modal form input[type=submit] {
+  margin-right: 0;
+  margin-top: 5px;
 }
 
 .form form input[type=checkbox] {
@@ -2522,6 +2563,14 @@ button,
 
 .form form input[type=checkbox]:checked + label::after {
   background-size: 10px;
+}
+
+.form--modal form input[type=checkbox] + label {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 0;
+  width: calc(100% - 20px);
 }
 
 .feedback {
