@@ -16,7 +16,7 @@
   <body>
     <div class="wrapper">
       <header class="header">
-        <div class="header__top container">
+        <div class="header__top container" data-fix-block>
           <div class="header__top-content container__wrapper">
             <div class="header__logo logo logo--header">
               <a class="logo__link" href="#">
@@ -47,7 +47,7 @@
           <div class="header__bottom-content container__wrapper">
             <h2>Печатные платы</h2>
             <p>Производство и монтаж, поставка комплектующих, блоков&nbsp;и&nbsp;модулей</p>
-            <button class="header__button header__button--anchor button" type="button">Получить бесплатную консультацию</button>
+            <button class="header__button header__button--anchor button" data-content-changing="бесплатная консультация" data-content-changing-width="768" type="button">Получить бесплатную консультацию</button>
           </div>
         </div>
       </header>
@@ -99,15 +99,15 @@
             </div>
             <div class="about__content">
               <h2>О компании</h2>
-              <div class="about__text">
-                <div class="about__displayed">
+              <div class="about__text" data-collapsible-container>
+                <div class="about__displayed" data-collapsible-displayed>
                   <p>Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые технологии с 1997&nbsp;года. Выполняем срочные заказы&nbsp;и пилотные образцы до&nbsp;10 дней.</p>
                   <p>
                     Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.<br>Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях
                     Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.
                   </p>
                 </div>
-                <div class="about__hidden">
+                <div class="about__hidden" data-collapsible-hidden>
                   <p>
                     Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более 1&nbsp;000&nbsp;000 клиентов, 70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент
                     насчитывается более 14 офисов по&nbsp;всей стране и&nbsp;20 городов присутствия.
@@ -118,13 +118,13 @@
                   </p>
                 </div>
               </div>
-              <button class="about__button button button--transparent-blue" type="button">Подробнее</button>
+              <button class="about__button button button--transparent-blue" data-collapsible-button type="button">Подробнее</button>
             </div>
           </div>
         </section>
         <section class="services container">
           <div class="services__container container__wrapper">
-            <h2>Smart Device предлагает следующие товары и услуги</h2>
+            <h2 data-content-changing="Товары и&nbsp;услуги Smart&nbsp;Device" data-content-changing-width="768">Smart Device предлагает следующие товары и услуги</h2>
             <ul class="services__list">
               <li class="services__item services__item--1">
                 <a href="#"> Производство<br>печатных плат</a>
@@ -138,27 +138,27 @@
             </ul>
           </div>
         </section>
+        <section class="feedback container">
+          <div class="feedback__wrapper container__wrapper">
+            <picture>
+              <source type="image/webp" srcset="./img/feedback/plane.webp, ./img/feedback/plane@2x.webp 2x">
+              <img class="feedback__image" src="./img/feedback/plane.png" srcset="./img/feedback/plane@2x.png 2x" width="510" height="285">
+            </picture>
+            <section class="form">
+              <h2>Остались вопросы? Задайте их&nbsp;нам!</h2>
+              <p>Мы&nbsp;проконсультируем Вас бесплатно</p>
+              <form action="https://echo.htmlacademy.ru" method="post">
+                <input name="name" type="text" placeholder="Имя">
+                <input name="tel" type="tel" placeholder="Телефон">
+                <textarea name="question" placeholder="Ваш вопрос"></textarea>
+                <input type="submit" value="Задать вопрос">
+                <input id="personaldata" type="checkbox">
+                <label for="personaldata">Я согласен на обработку персональных данных</label>
+              </form>
+            </section>
+          </div>
+        </section>
       </main>
-      <section class="feedback container">
-        <div class="feedback__wrapper container__wrapper">
-          <picture>
-            <source type="image/webp" srcset="./img/feedback/plane.webp, ./img/feedback/plane@2x.webp 2x">
-            <img class="feedback__image" src="./img/feedback/plane.png" srcset="./img/feedback/plane@2x.png 2x" width="510" height="285">
-          </picture>
-          <section class="form">
-            <h2>Остались вопросы? Задайте их&nbsp;нам!</h2>
-            <p>Мы&nbsp;проконсультируем Вас бесплатно</p>
-            <form action="https://echo.htmlacademy.ru" method="post">
-              <input name="name" type="text" placeholder="Имя">
-              <input name="tel" type="tel" placeholder="Телефон">
-              <textarea name="question" placeholder="Ваш вопрос"></textarea>
-              <input type="submit" value="Задать вопрос">
-              <input id="personaldata" type="checkbox">
-              <label for="personaldata">Я согласен на обработку персональных данных</label>
-            </form>
-          </section>
-        </div>
-      </section>
 
       <footer class="footer container">
         <div class="footer__wrapper container__wrapper">

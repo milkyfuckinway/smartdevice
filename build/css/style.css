@@ -333,9 +333,9 @@ template {
 }
 
 :root {
-  --displayed-text-height: 172px;
-  --hidden-text-height: 150px;
-  --full-text-height: 322px;
+  --collapsible-displayed-height: 172px;
+  --collapsible-hidden-height: 150px;
+  --collapsible-full-height: 322px;
 }
 
 @font-face {
@@ -1392,7 +1392,7 @@ button,
   background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
   background: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1000;
 }
@@ -1837,7 +1837,7 @@ button,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-height: var(--displayed-text-height);
+  max-height: var(--collapsible-displayed-height);
   overflow: hidden;
   -webkit-transition: 0.3s max-height;
   -o-transition: 0.3s max-height;
@@ -1849,11 +1849,11 @@ button,
   }
 }
 .about__text--shown {
-  max-height: var(--full-text-height);
+  max-height: var(--collapsible-full-height);
 }
 @media (max-width: 767px) {
   .about__text--shown {
-    max-height: var(--full-text-height);
+    max-height: var(--collapsible-full-height);
   }
 }
 

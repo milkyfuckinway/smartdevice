@@ -27,7 +27,7 @@
 .about__text {
   display: flex;
   flex-direction: column;
-  max-height: var(--displayed-text-height);
+  max-height: var(--collapsible-displayed-height);
   overflow: hidden;
   transition: 0.3s max-height;
 
@@ -36,10 +36,10 @@
   }
 
   &--shown {
-    max-height: var(--full-text-height);
+    max-height: var(--collapsible-full-height);
 
     @include vp-767 {
-      max-height: var(--full-text-height);
+      max-height: var(--collapsible-full-height);
     }
   }
 }

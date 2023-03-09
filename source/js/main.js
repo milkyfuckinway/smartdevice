@@ -1,9 +1,10 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
-import {testFunciton} from './test';
 import {initAccordions} from './modules/accordion/init-accordion';
-
+import {initPhoneMask} from './modules/phone-mask/phone-mask';
+import {initCollapsible} from './modules/collapsible-text/init-collapsible';
+import {initContentChanging} from './modules/content-changing/init-content-changing';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -15,9 +16,11 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    testFunciton();
+    initCollapsible();
+    initPhoneMask();
     initAccordions();
     initModals();
+    initContentChanging();
     const form = new Form();
     window.form = form;
   });
