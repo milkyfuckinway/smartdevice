@@ -13,11 +13,7 @@ export class ScrollLock {
   }
 
   _getBodyScrollTop() {
-    return (
-      self.pageYOffset ||
-      (document.documentElement && document.documentElement.ScrollTop) ||
-      (document.body && document.body.scrollTop)
-    );
+    return self.pageYOffset || (document.documentElement && document.documentElement.ScrollTop) || (document.body && document.body.scrollTop);
   }
 
   disableScrolling() {
@@ -25,7 +21,8 @@ export class ScrollLock {
     if (this._getScrollbarWidth()) {
       document.body.style.paddingRight = `${this._getScrollbarWidth()}px`;
       this._fixedBlockElements.forEach((block) => {
-        block.style.paddingRight = `${this._getScrollbarWidth()}px`;
+        // block.style.paddingRight = `${this._getScrollbarWidth()}px`;
+        block.style.width = `calc(100% - ${this._getScrollbarWidth()}px)`;
       });
     }
     document.body.style.top = `-${this._scrollTop}px`;
@@ -38,7 +35,8 @@ export class ScrollLock {
     document.body.style.paddingRight = null;
     document.body.style.top = null;
     this._fixedBlockElements.forEach((block) => {
-      block.style.paddingRight = null;
+      // block.style.paddingRight = null;
+      block.style.width = null;
     });
     document.body.removeAttribute('data-scroll');
     this._scrollTop = null;

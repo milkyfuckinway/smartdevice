@@ -4,23 +4,25 @@
   }
 }
 
-@mixin graphic-webp($filename, $extname: "jpg") {
+@mixin graphic-webp($filename, $background-color: #000000, $extname: "jpg") {
   $webp: url("./../img/#{$filename}.webp");
 
   @supports (background-image: $webp) {
+    background-color: $background-color;
     background-image: $webp;
   }
 
   @supports not (background-image: $webp) {
+    background-color: $background-color #000000;
     background-image: url("./../img/#{$filename}.#{$extname}");
   }
 }
 
-@mixin graphic-retina($filename, $extname: "jpg") {
-  @include graphic-webp($filename, $extname);
+@mixin graphic-retina($filename, $background-color: #000000, $extname: "jpg") {
+  @include graphic-webp($filename, $background-color, $extname);
 
   @include retina {
-    @include graphic-webp("#{$filename}@2x", $extname);
+    @include graphic-webp("#{$filename}@2x", $background-color, $extname);
   }
 }
 

@@ -1,5 +1,5 @@
 .header {
-  @include graphic-retina("intro/desktop/intro-background-image");
+  @include graphic-retina("intro/desktop/intro-background-image", $color-black-pearl);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -8,11 +8,11 @@
   z-index: 1000;
 
   @include vp-1023 {
-    @include graphic-retina("intro/tablet/intro-background-image");
+    @include graphic-retina("intro/tablet/intro-background-image", $color-black-pearl);
   }
 
   @include vp-767 {
-    @include graphic-retina("intro/mobile/intro-background-image");
+    @include graphic-retina("intro/mobile/intro-background-image", $color-black-pearl);
   }
 
   &::after {
@@ -168,8 +168,8 @@
   flex-direction: column;
   gap: 40px;
   margin-top: auto;
-  min-height: 760px;
-  padding: 190px 300px 260px 157px;
+  min-height: 880px;
+  padding: 310px 300px 282px 157px;
 
   @include vp-1023 {
     gap: 0;

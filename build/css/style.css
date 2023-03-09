@@ -1307,22 +1307,26 @@ button,
 }
 @supports (background-image: url("./../img/intro/desktop/intro-background-image.webp")) {
   .header {
+    background-color: #041827;
     background-image: url("./../img/intro/desktop/intro-background-image.webp");
   }
 }
 @supports not (background-image: url("./../img/intro/desktop/intro-background-image.webp")) {
   .header {
+    background-color: #041827 #000000;
     background-image: url("./../img/intro/desktop/intro-background-image.jpg");
   }
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   @supports (background-image: url("./../img/intro/desktop/intro-background-image@2x.webp")) {
     .header {
+      background-color: #041827;
       background-image: url("./../img/intro/desktop/intro-background-image@2x.webp");
     }
   }
   @supports not (background-image: url("./../img/intro/desktop/intro-background-image@2x.webp")) {
     .header {
+      background-color: #041827 #000000;
       background-image: url("./../img/intro/desktop/intro-background-image@2x.jpg");
     }
   }
@@ -1330,11 +1334,13 @@ button,
 @media (max-width: 1023px) {
   @supports (background-image: url("./../img/intro/tablet/intro-background-image.webp")) {
     .header {
+      background-color: #041827;
       background-image: url("./../img/intro/tablet/intro-background-image.webp");
     }
   }
   @supports not (background-image: url("./../img/intro/tablet/intro-background-image.webp")) {
     .header {
+      background-color: #041827 #000000;
       background-image: url("./../img/intro/tablet/intro-background-image.jpg");
     }
   }
@@ -1342,11 +1348,13 @@ button,
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
   @supports (background-image: url("./../img/intro/tablet/intro-background-image@2x.webp")) {
     .header {
+      background-color: #041827;
       background-image: url("./../img/intro/tablet/intro-background-image@2x.webp");
     }
   }
   @supports not (background-image: url("./../img/intro/tablet/intro-background-image@2x.webp")) {
     .header {
+      background-color: #041827 #000000;
       background-image: url("./../img/intro/tablet/intro-background-image@2x.jpg");
     }
   }
@@ -1354,11 +1362,13 @@ button,
 @media (max-width: 767px) {
   @supports (background-image: url("./../img/intro/mobile/intro-background-image.webp")) {
     .header {
+      background-color: #041827;
       background-image: url("./../img/intro/mobile/intro-background-image.webp");
     }
   }
   @supports not (background-image: url("./../img/intro/mobile/intro-background-image.webp")) {
     .header {
+      background-color: #041827 #000000;
       background-image: url("./../img/intro/mobile/intro-background-image.jpg");
     }
   }
@@ -1366,11 +1376,13 @@ button,
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
   @supports (background-image: url("./../img/intro/mobile/intro-background-image@2x.webp")) {
     .header {
+      background-color: #041827;
       background-image: url("./../img/intro/mobile/intro-background-image@2x.webp");
     }
   }
   @supports not (background-image: url("./../img/intro/mobile/intro-background-image@2x.webp")) {
     .header {
+      background-color: #041827 #000000;
       background-image: url("./../img/intro/mobile/intro-background-image@2x.jpg");
     }
   }
@@ -1570,8 +1582,8 @@ button,
           flex-direction: column;
   gap: 40px;
   margin-top: auto;
-  min-height: 760px;
-  padding: 190px 300px 260px 157px;
+  min-height: 880px;
+  padding: 310px 300px 282px 157px;
 }
 @media (max-width: 1023px) {
   .header__bottom-content {
@@ -2020,66 +2032,78 @@ button,
 }
 @supports (background-image: url("./../img/services/desktop/services-1.webp")) {
   .services__item--1 {
+    background-color: #00b2ff;
     background-image: url("./../img/services/desktop/services-1.webp");
   }
 }
 @supports not (background-image: url("./../img/services/desktop/services-1.webp")) {
   .services__item--1 {
+    background-color: #00b2ff #000000;
     background-image: url("./../img/services/desktop/services-1.jpg");
   }
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   @supports (background-image: url("./../img/services/desktop/services-1@2x.webp")) {
     .services__item--1 {
+      background-color: #00b2ff;
       background-image: url("./../img/services/desktop/services-1@2x.webp");
     }
   }
   @supports not (background-image: url("./../img/services/desktop/services-1@2x.webp")) {
     .services__item--1 {
+      background-color: #00b2ff #000000;
       background-image: url("./../img/services/desktop/services-1@2x.jpg");
     }
   }
 }
 @supports (background-image: url("./../img/services/desktop/services-2.webp")) {
   .services__item--2 {
+    background-color: #00b2ff;
     background-image: url("./../img/services/desktop/services-2.webp");
   }
 }
 @supports not (background-image: url("./../img/services/desktop/services-2.webp")) {
   .services__item--2 {
+    background-color: #00b2ff #000000;
     background-image: url("./../img/services/desktop/services-2.jpg");
   }
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   @supports (background-image: url("./../img/services/desktop/services-2@2x.webp")) {
     .services__item--2 {
+      background-color: #00b2ff;
       background-image: url("./../img/services/desktop/services-2@2x.webp");
     }
   }
   @supports not (background-image: url("./../img/services/desktop/services-2@2x.webp")) {
     .services__item--2 {
+      background-color: #00b2ff #000000;
       background-image: url("./../img/services/desktop/services-2@2x.jpg");
     }
   }
 }
 @supports (background-image: url("./../img/services/desktop/services-3.webp")) {
   .services__item--3 {
+    background-color: #00b2ff;
     background-image: url("./../img/services/desktop/services-3.webp");
   }
 }
 @supports not (background-image: url("./../img/services/desktop/services-3.webp")) {
   .services__item--3 {
+    background-color: #00b2ff #000000;
     background-image: url("./../img/services/desktop/services-3.jpg");
   }
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   @supports (background-image: url("./../img/services/desktop/services-3@2x.webp")) {
     .services__item--3 {
+      background-color: #00b2ff;
       background-image: url("./../img/services/desktop/services-3@2x.webp");
     }
   }
   @supports not (background-image: url("./../img/services/desktop/services-3@2x.webp")) {
     .services__item--3 {
+      background-color: #00b2ff #000000;
       background-image: url("./../img/services/desktop/services-3@2x.jpg");
     }
   }
@@ -2090,11 +2114,13 @@ button,
   }
   @supports (background-image: url("./../img/services/tablet/services-1.webp")) {
     .services__item--1 {
+      background-color: #00b2ff;
       background-image: url("./../img/services/tablet/services-1.webp");
     }
   }
   @supports not (background-image: url("./../img/services/tablet/services-1.webp")) {
     .services__item--1 {
+      background-color: #00b2ff #000000;
       background-image: url("./../img/services/tablet/services-1.jpg");
     }
   }
@@ -2102,11 +2128,13 @@ button,
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
   @supports (background-image: url("./../img/services/tablet/services-1@2x.webp")) {
     .services__item--1 {
+      background-color: #00b2ff;
       background-image: url("./../img/services/tablet/services-1@2x.webp");
     }
   }
   @supports not (background-image: url("./../img/services/tablet/services-1@2x.webp")) {
     .services__item--1 {
+      background-color: #00b2ff #000000;
       background-image: url("./../img/services/tablet/services-1@2x.jpg");
     }
   }
@@ -2114,11 +2142,13 @@ button,
 @media (max-width: 1023px) {
   @supports (background-image: url("./../img/services/tablet/services-2.webp")) {
     .services__item--2 {
+      background-color: #00b2ff;
       background-image: url("./../img/services/tablet/services-2.webp");
     }
   }
   @supports not (background-image: url("./../img/services/tablet/services-2.webp")) {
     .services__item--2 {
+      background-color: #00b2ff #000000;
       background-image: url("./../img/services/tablet/services-2.jpg");
     }
   }
@@ -2126,11 +2156,13 @@ button,
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
   @supports (background-image: url("./../img/services/tablet/services-2@2x.webp")) {
     .services__item--2 {
+      background-color: #00b2ff;
       background-image: url("./../img/services/tablet/services-2@2x.webp");
     }
   }
   @supports not (background-image: url("./../img/services/tablet/services-2@2x.webp")) {
     .services__item--2 {
+      background-color: #00b2ff #000000;
       background-image: url("./../img/services/tablet/services-2@2x.jpg");
     }
   }
@@ -2138,11 +2170,13 @@ button,
 @media (max-width: 1023px) {
   @supports (background-image: url("./../img/services/tablet/services-3.webp")) {
     .services__item--3 {
+      background-color: #00b2ff;
       background-image: url("./../img/services/tablet/services-3.webp");
     }
   }
   @supports not (background-image: url("./../img/services/tablet/services-3.webp")) {
     .services__item--3 {
+      background-color: #00b2ff #000000;
       background-image: url("./../img/services/tablet/services-3.jpg");
     }
   }
@@ -2150,11 +2184,13 @@ button,
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
   @supports (background-image: url("./../img/services/tablet/services-3@2x.webp")) {
     .services__item--3 {
+      background-color: #00b2ff;
       background-image: url("./../img/services/tablet/services-3@2x.webp");
     }
   }
   @supports not (background-image: url("./../img/services/tablet/services-3@2x.webp")) {
     .services__item--3 {
+      background-color: #00b2ff #000000;
       background-image: url("./../img/services/tablet/services-3@2x.jpg");
     }
   }
@@ -2162,11 +2198,13 @@ button,
 @media (max-width: 767px) {
   @supports (background-image: url("./../img/services/mobile/services-1.webp")) {
     .services__item--1 {
+      background-color: #00b2ff;
       background-image: url("./../img/services/mobile/services-1.webp");
     }
   }
   @supports not (background-image: url("./../img/services/mobile/services-1.webp")) {
     .services__item--1 {
+      background-color: #00b2ff #000000;
       background-image: url("./../img/services/mobile/services-1.jpg");
     }
   }
@@ -2174,11 +2212,13 @@ button,
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
   @supports (background-image: url("./../img/services/mobile/services-1@2x.webp")) {
     .services__item--1 {
+      background-color: #00b2ff;
       background-image: url("./../img/services/mobile/services-1@2x.webp");
     }
   }
   @supports not (background-image: url("./../img/services/mobile/services-1@2x.webp")) {
     .services__item--1 {
+      background-color: #00b2ff #000000;
       background-image: url("./../img/services/mobile/services-1@2x.jpg");
     }
   }
@@ -2186,11 +2226,13 @@ button,
 @media (max-width: 767px) {
   @supports (background-image: url("./../img/services/mobile/services-2.webp")) {
     .services__item--2 {
+      background-color: #00b2ff;
       background-image: url("./../img/services/mobile/services-2.webp");
     }
   }
   @supports not (background-image: url("./../img/services/mobile/services-2.webp")) {
     .services__item--2 {
+      background-color: #00b2ff #000000;
       background-image: url("./../img/services/mobile/services-2.jpg");
     }
   }
@@ -2198,11 +2240,13 @@ button,
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
   @supports (background-image: url("./../img/services/mobile/services-2@2x.webp")) {
     .services__item--2 {
+      background-color: #00b2ff;
       background-image: url("./../img/services/mobile/services-2@2x.webp");
     }
   }
   @supports not (background-image: url("./../img/services/mobile/services-2@2x.webp")) {
     .services__item--2 {
+      background-color: #00b2ff #000000;
       background-image: url("./../img/services/mobile/services-2@2x.jpg");
     }
   }
@@ -2210,11 +2254,13 @@ button,
 @media (max-width: 767px) {
   @supports (background-image: url("./../img/services/mobile/services-3.webp")) {
     .services__item--3 {
+      background-color: #00b2ff;
       background-image: url("./../img/services/mobile/services-3.webp");
     }
   }
   @supports not (background-image: url("./../img/services/mobile/services-3.webp")) {
     .services__item--3 {
+      background-color: #00b2ff #000000;
       background-image: url("./../img/services/mobile/services-3.jpg");
     }
   }
@@ -2222,11 +2268,13 @@ button,
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
   @supports (background-image: url("./../img/services/mobile/services-3@2x.webp")) {
     .services__item--3 {
+      background-color: #00b2ff;
       background-image: url("./../img/services/mobile/services-3@2x.webp");
     }
   }
   @supports not (background-image: url("./../img/services/mobile/services-3@2x.webp")) {
     .services__item--3 {
+      background-color: #00b2ff #000000;
       background-image: url("./../img/services/mobile/services-3@2x.jpg");
     }
   }
