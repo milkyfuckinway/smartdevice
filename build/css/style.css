@@ -1315,7 +1315,7 @@ button,
   }
 }
 
-.advantages ul li:before {
+.advantages ul li::before {
   background-color: #00b2ff;
   content: "";
   height: 100%;

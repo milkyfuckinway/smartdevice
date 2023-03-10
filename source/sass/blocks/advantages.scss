@@ -119,7 +119,7 @@
   }
 }
 
-.advantages ul li:before {
+.advantages ul li::before {
   background-color: $color-deep-sky-blue;
   content: "";
   height: 100%;
