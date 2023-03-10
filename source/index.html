@@ -12,41 +12,42 @@
     <link href="./img/intro/mobile/intro-background-image@2x.webp" rel="preload" as="image">
     <link href="./css/style.min.css" rel="stylesheet">
   </head>
+
   <body>
     <div class="wrapper">
       <header class="header">
         <div class="header__top container" data-fix-block>
           <div class="header__top-content container__wrapper">
             <div class="header__logo logo logo--header">
-              <a class="logo__link" href="./index.html" aria-label="Домашняя страница.">
+              <a href="./index.html" aria-label="Домашняя страница.">
                 <picture>
                   <source media="(max-width: 767px)" width="55" height="55" srcset="./img/svg/logo-short.svg">
                   <img src="./img/svg/logo-full.svg" alt="Логотип компании Smart Device." aria-hidden="true" width="215" height="55">
                 </picture>
               </a>
             </div>
-            <ul class="header__list">
-              <li class="header__item">
-                <a class="header__link" href="mailto:info@sd.ru" aria-label="Написать нам: info@sd.ru.">
-                  <svg class="header__icon" width="20" height="20">
-                    <use xlink:href="./img/sprite.svg#mail"></use></svg><span class="header__link-content">info@sd.ru</span>
+            <ul>
+              <li>
+                <a href="mailto:info@sd.ru" aria-label="Написать нам: info@sd.ru.">
+                  <svg width="20" height="20">
+                    <use xlink:href="./img/sprite.svg#mail"></use></svg><span>info@sd.ru</span>
                 </a>
               </li>
-              <li class="header__item">
-                <a class="header__link" href="tel:+74950005252" aria-label="Позвонить нам: +7 495 000 52 52.">
-                  <svg class="header__icon" width="20" height="20">
-                    <use xlink:href="./img/sprite.svg#phone"></use></svg><span class="header__link-content">+7 (495) 000 52 52</span>
+              <li>
+                <a href="tel:+74950005252" aria-label="Позвонить нам: +7 495 000 52 52.">
+                  <svg width="20" height="20">
+                    <use xlink:href="./img/sprite.svg#phone"></use></svg><span>+7 (495) 000 52 52</span>
                 </a>
               </li>
             </ul>
-            <button class="header__button header__button--modal button button--transparent-white" data-open-modal="feedback" type="button">Заказать звонок</button>
+            <button class="header__button header__button--modal button button--modal" data-open-modal="feedback" type="button">Заказать звонок</button>
           </div>
         </div>
         <div class="header__bottom container">
           <div class="header__bottom-content container__wrapper">
             <h2>Печатные платы</h2>
             <p>Производство и монтаж, поставка комплектующих, блоков&nbsp;и&nbsp;модулей</p>
-            <a class="header__button header__button--anchor button" data-content-changing="бесплатная консультация" data-content-changing-width="768" type="button" href="#feedback">Получить бесплатную консультацию</a>
+            <a class="button--anchor button" data-content-changing="бесплатная консультация" data-content-changing-width="768" type="button" href="#feedback">Получить бесплатную консультацию</a>
           </div>
         </div>
       </header>
@@ -56,29 +57,29 @@
           <h1 class="visually-hidden">Smart Device&nbsp;&mdash; умные технологии</h1>
           <h2 class="visually-hidden">Приемущества.</h2>
           <div class="container__wrapper advantages__wrapper">
-            <ul class="advantages__list">
-              <li class="advantages__item">
+            <ul>
+              <li>
                 <svg width="35" height="35">
                   <use xlink:href="./img/sprite.svg#stopwatch"></use>
                 </svg>
                 <h3>Оперативные сроки</h3>
                 <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и&nbsp;доставлять заказы плат&nbsp;и комплектующих в&nbsp;самые короткие сроки</p>
               </li>
-              <li class="advantages__item">
+              <li>
                 <svg width="35" height="35">
                   <use xlink:href="./img/sprite.svg#hired"></use>
                 </svg>
                 <h3>Крупные поставщики</h3>
                 <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с&nbsp;такими компаниями обеспечивает хорошее качество нашей продукции.</p>
               </li>
-              <li class="advantages__item">
+              <li>
                 <svg width="35" height="35">
                   <use xlink:href="./img/sprite.svg#detective"></use>
                 </svg>
                 <h3>Полная конфиденциальность</h3>
                 <p>По&nbsp;желанию клиента&nbsp;мы обеспечиваем полную конфиденциальность.</p>
               </li>
-              <li class="advantages__item">
+              <li>
                 <svg width="35" height="35">
                   <use xlink:href="./img/sprite.svg#tag"></use>
                 </svg>
@@ -117,23 +118,21 @@
                   </p>
                 </div>
               </div>
-              <button class="about__button button button--transparent-blue" data-collapsible-button type="button">Подробнее</button>
+              <button class="button button--transparent-blue" data-collapsible-button type="button">Подробнее</button>
             </div>
           </div>
         </section>
         <section class="services container">
           <div class="services__container container__wrapper">
             <h2 data-content-changing="Товары и&nbsp;услуги Smart&nbsp;Device" data-content-changing-width="768">Smart Device предлагает следующие товары и услуги</h2>
-            <ul class="services__list">
-              <li class="services__item services__item--1">
+            <ul>
+              <li>
                 <a href="#"> Производство<br>печатных плат</a>
               </li>
-              <li class="services__item services__item--2">
-                <a href="#">
-                  Монтаж
-                  <br class="services__br services__br--tablet">печатных <br class="services__br services__br--desktop">плат</a>
+              <li>
+                <a href="#"> Монтаж печатных<br>плат</a>
               </li>
-              <li class="services__item services__item--3">
+              <li>
                 <a href="#"> Комплектующие<br>для светотехники</a>
               </li>
             </ul>
@@ -171,27 +170,27 @@
         <div class="footer__wrapper container__wrapper">
           <div class="footer__social social">
             <div class="social__logo logo">
-              <a class="logo__link" href="./index.html" aria-label="Домашняя страница.">
+              <a href="./index.html" aria-label="Домашняя страница.">
                 <img src="./img/svg/logo-full.svg" alt="Логотип компании Smart Device." aria-hidden="true" width="215" height="55">
               </a>
             </div>
-            <ul class="social__list">
-              <li class="social__item">
-                <a class="social__link" href="#" aria-label="Наша страница в Одноклассниках.">
+            <ul>
+              <li>
+                <a href="#" aria-label="Наша страница в Одноклассниках.">
                   <svg width="30" height="30">
                     <use xlink:href="./img/sprite.svg#ok"></use>
                   </svg>
                 </a>
               </li>
-              <li class="social__item">
-                <a class="social__link" href="#" aria-label="Наше сообщество в Вконтакте.">
+              <li>
+                <a href="#" aria-label="Наше сообщество в Вконтакте.">
                   <svg width="30" height="30">
                     <use xlink:href="./img/sprite.svg#vk"></use>
                   </svg>
                 </a>
               </li>
-              <li class="social__item">
-                <a class="social__link" href="#" aria-label="Наш профиль в Pinterest.">
+              <li>
+                <a href="#" aria-label="Наш профиль в Pinterest.">
                   <svg width="30" height="30">
                     <use xlink:href="./img/sprite.svg#pinterest"></use>
                   </svg>

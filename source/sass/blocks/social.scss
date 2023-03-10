@@ -19,7 +19,7 @@
   }
 }
 
-.social__list {
+.social ul {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
@@ -41,7 +41,7 @@
   }
 }
 
-.social__link {
+.social ul li a {
   @include default-states($color-deep-sky-blue);
   align-items: center;
   display: flex;

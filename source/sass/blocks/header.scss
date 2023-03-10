@@ -56,7 +56,7 @@
   }
 }
 
-.header__list {
+.header ul {
   column-gap: 30px;
   display: grid;
   grid-template-columns: repeat(2, minmax(225px, 1fr));
@@ -82,20 +82,19 @@
   }
 }
 
-.header__link {
+.header ul li a {
+  @include default-states($color-deep-sky-blue);
   align-items: center;
   color: $color-default-white-alt;
   display: flex;
   gap: 15px;
-
-  @include default-states($color-deep-sky-blue);
 
   @include vp-1023 {
     padding: 10px;
   }
 }
 
-.header__link-content {
+.header ul li a span {
   line-height: 100%;
 
   @include vp-1023 {
@@ -103,57 +102,9 @@
   }
 }
 
-.header__icon {
+.header ul li a svg {
   fill: $color-deep-sky-blue;
   flex-shrink: 0;
-}
-
-.header__button {
-  &--modal {
-    background-color: transparent;
-    border: 1px solid $color-default-white-alt;
-    border-radius: 3px;
-    color: $color-default-white-alt;
-    font-family: $ff-robotocondensed;
-    margin: 0;
-    margin-bottom: 5px;
-    margin-right: 60px;
-    min-height: 40px;
-    min-width: 160px;
-    padding: 0;
-    text-transform: uppercase;
-
-    @include vp-1023 {
-      display: none;
-    }
-  }
-
-  &--anchor {
-    align-items: center;
-    background-color: $color-deep-sky-blue;
-    color: $color-default-white-alt;
-    display: flex;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 100%;
-    margin-top: 5px;
-    min-height: 55px;
-    padding: 15px 27px;
-
-    @include vp-1023 {
-      margin-left: 45px;
-      margin-top: auto;
-    }
-
-    @include vp-767 {
-      font-size: 14px;
-      margin: 0;
-      margin-top: 44px;
-      min-height: 40px;
-      padding: 10px 30px;
-      width: 100%;
-    }
-  }
 }
 
 .header__bottom {

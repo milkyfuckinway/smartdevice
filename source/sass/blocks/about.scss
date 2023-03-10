@@ -74,17 +74,3 @@
     line-height: 135%;
   }
 }
-
-.about__button {
-  margin-top: 20px;
-
-  @include vp-1023 {
-    margin-top: 0;
-  }
-
-  @include vp-767 {
-    margin-top: 10px;
-    min-width: 160px;
-    padding: 9px 13px;
-  }
-}
