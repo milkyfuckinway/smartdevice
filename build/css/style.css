@@ -2092,17 +2092,21 @@ button,
   top: -20px;
 }
 .form__input .is-invalid {
-  color: #f2f5f6;
+  color: rgba(4, 24, 39, 0.7);
 }
 
 .form__input--personal-data {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
   position: relative;
+}
+@media (max-width: 767px) {
+  .form__input--personal-data {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
 }
 
 .form__input--personal-data input[type=checkbox] {

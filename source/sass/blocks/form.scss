@@ -183,14 +183,17 @@
   }
 
   & .is-invalid {
-    color: $color-default-white-alt;
+    color: rgba($color-black-pearl, 0.7);
   }
 }
 
 .form__input--personal-data {
   display: flex;
-  height: max-content;
   position: relative;
+
+  @include vp-767 {
+    height: max-content;
+  }
 }
 
 .form__input--personal-data input[type="checkbox"] {
@@ -264,6 +267,7 @@
     background-size: 10px;
   }
 }
+
 .form__input--personal-data input[type="checkbox"]:focus-visible + label {
   @include default-outline(rgba($color-black-pearl, 0.5));
 }
