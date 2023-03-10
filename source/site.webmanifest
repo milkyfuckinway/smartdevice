@@ -1,0 +1,15 @@
+{
+  "name": "Smart Device dash; умные технологии.",
+  "short_name": "Smart Device.",
+  "start_url": "../index.html",
+  "description": "Производство и монтаж, поставка комплектующих. Магазин Smart Device.",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "icons": [
+    { "src": "img/favicons/android-chrome-192x192.png", "type": "image/png", "sizes": "192x192",
+    "purpose": "any maskable" },
+    { "src": "img/favicons/android-chrome-512x512.png", "type": "image/png", "sizes": "512x512",
+    "purpose": "any maskable" }
+  ]
+}
