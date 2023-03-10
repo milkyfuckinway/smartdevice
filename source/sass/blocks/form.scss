@@ -7,14 +7,6 @@
   @include vp-1023 {
     max-width: 100%;
   }
-
-  &--modal {
-    background-color: $color-deep-sky-blue;
-    border-radius: 3px;
-    max-width: 500px;
-    min-height: 610px;
-    transform: translate(-8px, 30px);
-  }
 }
 
 .form h2 {
@@ -40,14 +32,6 @@
   }
 }
 
-.form--modal h2 {
-  font-size: 30px;
-  line-height: 100%;
-  margin: 0;
-  margin-bottom: 15px;
-  min-height: auto;
-}
-
 .form p {
   color: $color-default-white;
   font-size: 16px;
@@ -65,6 +49,22 @@
     line-height: 134.4%;
     margin-bottom: 34px;
   }
+}
+
+.form--modal {
+  background-color: $color-deep-sky-blue;
+  border-radius: 3px;
+  max-width: 500px;
+  min-height: 610px;
+  transform: translate(-17px, 30px);
+}
+
+.form--modal h2 {
+  font-size: 30px;
+  line-height: 100%;
+  margin: 0;
+  margin-bottom: 15px;
+  min-height: auto;
 }
 
 .form--modal p {
@@ -96,26 +96,24 @@
   width: 100%;
 }
 
-.form form input:not([type="submit"]):not([type="checkbox"]),
-.form form textarea {
+.form input:not([type="checkbox"]),
+.form textarea {
   background-color: $color-black-pearl-15;
   border: 0;
   color: inherit;
   margin: 0;
   min-height: 50px;
-  padding: 0;
   padding: 15px;
+  width: 100%;
 
   &::placeholder {
-    color: $color-default-white;
+    color: rgba($color-default-white, 0.7);
   }
 
-  @include vp-767 {
-    width: 100%;
-  }
+  @include default-states($color-black-pearl-50);
 }
 
-.form form textarea {
+.form textarea {
   grid-column: 1 / 3;
   margin-bottom: 15px;
   min-height: 155px;
@@ -132,11 +130,11 @@
   }
 }
 
-.form--modal form textarea {
+.form--modal textarea {
   margin-bottom: 0;
 }
 
-.form form input[type="submit"] {
+.form__submit {
   background-color: $color-black-pearl;
   border: 0;
   border-radius: 3px;
@@ -154,6 +152,8 @@
   text-decoration: none;
   text-transform: uppercase;
 
+  @include default-states($color-black-pearl-50);
+
   @include vp-1023 {
     margin-right: 55px;
   }
@@ -162,20 +162,60 @@
     margin: 0;
     width: 100%;
   }
+
+  &--modal {
+    margin-right: 0;
+    margin-top: 5px;
+  }
 }
 
-.form--modal form input[type="submit"] {
-  margin-right: 0;
-  margin-top: 5px;
+.form__input {
+  position: relative;
+  width: 100%;
+
+  & .input-message {
+    color: $color-default-white-alt;
+    font-family: $ff-robotocondensed;
+    font-size: 14px;
+    left: 0;
+    position: absolute;
+    top: -20px;
+  }
+
+  & .is-invalid {
+    color: $color-default-white-alt;
+  }
 }
 
-.form form input[type="checkbox"] {
+.form__input--personal-data {
+  display: flex;
+  height: max-content;
+  position: relative;
+}
+
+.form__input--personal-data input[type="checkbox"] {
   @include visually-hidden;
+  bottom: 10px;
+  height: 15px;
+  left: 10px;
+  width: 15px;
+
+  @include vp-1023 {
+    bottom: 0;
+    left: 0;
+  }
+
+  @include vp-767 {
+    bottom: 5px;
+    left: 5px;
+  }
 }
 
-.form form input[type="checkbox"] + label {
+.form__input--personal-data input[type="checkbox"] + label {
+  @include default-states(rgba($color-black-pearl, 0.5));
   align-items: center;
   align-self: flex-end;
+  cursor: pointer;
   display: flex;
   font-size: 14px;
   gap: 10px;
@@ -202,7 +242,7 @@
     background-position: 40% center;
     background-repeat: no-repeat;
     background-size: 0;
-    left: 0px;
+    left: 0;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -219,14 +259,16 @@
   }
 }
 
-.form form input[type="checkbox"]:checked + label {
+.form__input--personal-data input[type="checkbox"]:checked + label {
   &::after {
     background-size: 10px;
   }
 }
+.form__input--personal-data input[type="checkbox"]:focus-visible + label {
+  @include default-outline(rgba($color-black-pearl, 0.5));
+}
 
-.form--modal form input[type="checkbox"] + label {
+.form--modal .form__input--personal-data {
   align-self: center;
   margin: 0;
-  width: calc(100% - 20px);
 }

@@ -1,6 +1,7 @@
 .social {
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
   gap: 30px;
 
   @include vp-1023 {
@@ -41,6 +42,7 @@
 }
 
 .social__link {
+  @include default-states($color-deep-sky-blue);
   align-items: center;
   display: flex;
   fill: $color-default-white;

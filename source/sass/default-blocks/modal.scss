@@ -58,15 +58,17 @@
     }
   }
 
-  &__close-btn {
-    background: $color-transparent;
+  &__close-button {
+    @include default-states(rgba($color-black-pearl, 0.5));
+    background-color: transparent;
     border: none;
     cursor: pointer;
+    display: flex;
     height: 40px;
-    padding: 0;
+    padding: 10px;
     position: absolute;
-    right: 22px;
-    top: 22px;
+    right: 15px;
+    top: 15px;
     width: 40px;
     z-index: 1;
   }

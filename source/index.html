@@ -12,7 +12,6 @@
     <link href="./img/intro/mobile/intro-background-image@2x.webp" rel="preload" as="image">
     <link href="./css/style.min.css" rel="stylesheet">
   </head>
-
   <body>
     <div class="wrapper">
       <header class="header">
@@ -130,7 +129,9 @@
                 <a href="#"> Производство<br>печатных плат</a>
               </li>
               <li class="services__item services__item--2">
-                <a href="#"> Монтаж <br class="services__br services__br--tablet">печатных <br class="services__br services__br--desktop">плат</a>
+                <a href="#">
+                  Монтаж
+                  <br class="services__br services__br--tablet">печатных <br class="services__br services__br--desktop">плат</a>
               </li>
               <li class="services__item services__item--3">
                 <a href="#"> Комплектующие<br>для светотехники</a>
@@ -139,27 +140,33 @@
           </div>
         </section>
         <section class="feedback container">
+          <h2 class="visually-hidden">Свяжитесь с нами.</h2>
           <div class="feedback__wrapper container__wrapper">
             <picture>
               <source type="image/webp" srcset="./img/feedback/plane.webp, ./img/feedback/plane@2x.webp 2x">
               <img class="feedback__image" src="./img/feedback/plane.png" alt="Самолётик." aria-hidden="true" srcset="./img/feedback/plane@2x.png 2x" width="510" height="285">
             </picture>
-            <section class="form">
+            <section class="form" data-callback="base" data-form-validate data-message-base="Сообщение">
               <h2>Остались вопросы? Задайте их&nbsp;нам!</h2>
               <p>Мы&nbsp;проконсультируем Вас бесплатно</p>
               <form action="https://echo.htmlacademy.ru" method="post">
-                <input name="name" type="text" placeholder="Имя">
-                <input name="tel" type="tel" placeholder="Телефон">
-                <textarea name="question" placeholder="Ваш вопрос"></textarea>
-                <input type="submit" value="Задать вопрос">
-                <input id="personaldata" type="checkbox">
-                <label for="personaldata">Я согласен на обработку персональных данных</label>
+                <div class="form__input" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-required data-validate-type="text">
+                  <input name="name" type="text" aria-label="Введите имя." autocomplete="off" required placeholder="Имя">
+                </div>
+                <div class="form__input" data-message-base="Поле обязательно к заполнению" data-required data-validate-type="phone">
+                  <input name="tel" type="tel" aria-label="Введите номер телефона." autocomplete="off" required placeholder="Телефон">
+                </div>
+                <textarea name="question" autocomplete="off" placeholder="Ваш вопрос"></textarea>
+                <button class="form__submit" type="submit">Задать вопрос</button>
+                <div class="form__input form__input--personal-data" data-message-base="Необходимо согласие" data-validate-type="checkbox">
+                  <input id="personaldata" type="checkbox" checked required>
+                  <label for="personaldata">Я согласен на обработку персональных данных</label>
+                </div>
               </form>
             </section>
           </div>
         </section>
       </main>
-
       <footer class="footer container">
         <div class="footer__wrapper container__wrapper">
           <div class="footer__social social">
@@ -245,26 +252,30 @@
           </div>
         </div>
       </footer>
-
-      <!-- Модалки -->
       <div class="modal modal--preload" data-modal="feedback">
         <div class="modal__wrapper">
           <div class="modal__overlay" data-close-modal></div>
-          <section class="modal__content form form--modal">
-            <!-- <button class="modal__close-btn btn-reset" data-close-modal type="button" aria-label="Закрыть попап">
-              <svg width="15" height="15">
+          <section class="modal__content form form--modal" data-callback="base" data-form-validate data-message-base="Сообщение">
+            <button class="modal__close-button" data-close-modal type="button" aria-label="Закрыть попап">
+              <svg width="20" height="20">
                 <use xlink:href="./img/sprite.svg#icon-close"></use>
               </svg>
-            </button> -->
+            </button>
             <h2>Закажите звонок</h2>
-            <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+            <p>Оставьте контакты, мы проконсультируем вас&nbsp;бесплатно&nbsp;в&nbsp;удобное время</p>
             <form action="https://echo.htmlacademy.ru" method="post">
-              <input name="name" data-focus type="text" placeholder="Имя">
-              <input name="tel" type="tel" placeholder="Телефон">
-              <textarea name="question" placeholder="Ваш вопрос"></textarea>
-              <input type="submit" value="Отправить">
-              <input id="personaldata-modal" type="checkbox">
-              <label for="personaldata-modal">Я согласен на обработку персональных данных</label>
+              <div class="form__input" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-required data-validate-type="text">
+                <input name="name" data-focus type="text" aria-label="Введите имя." autocomplete="off" required placeholder="Имя">
+              </div>
+              <div class="form__input" data-message-base="Поле обязательно к заполнению" data-required data-validate-type="phone">
+                <input name="tel" type="tel" aria-label="Введите номер телефона." autocomplete="off" required placeholder="Телефон">
+              </div>
+              <textarea name="question" autocomplete="off" placeholder="Ваш вопрос"></textarea>
+              <button class="form__submit form__submit--modal" type="submit">Отправить</button>
+              <div class="form__input form__input--personal-data" data-message-base="Необходимо согласие" data-validate-type="checkbox">
+                <input id="personaldata-modal" type="checkbox" checked required>
+                <label for="personaldata-modal">Я согласен на обработку персональных данных</label>
+              </div>
             </form>
           </section>
         </div>

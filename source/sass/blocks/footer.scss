@@ -4,7 +4,6 @@
 
 .footer__wrapper {
   display: flex;
-  flex-wrap: wrap;
   gap: 30px;
   justify-content: space-between;
   padding-bottom: 50px;
@@ -12,6 +11,7 @@
   width: 100%;
 
   @include vp-1023 {
+    flex-wrap: wrap;
     padding-bottom: 65px;
   }
 

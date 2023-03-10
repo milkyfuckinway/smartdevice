@@ -2,12 +2,14 @@
 // ---------------------------------
 
 @import "vendor/normalize";
-// Swiper 7.4.1
 @import "vendor/data-accordion.scss";
+
+// Swiper 7.4.1
 // @import "vendor/swiper";
 
 // Global
 // ---------------------------------
+
 @import "variables";
 @import "mixins";
 @import "root";
@@ -19,16 +21,17 @@
 // Blocks
 // ---------------------------------
 
-@import "default-blocks/btn";
-@import "default-blocks/modal";
-@import "default-blocks/custom-input";
-@import "default-blocks/custom-toggle";
-@import "default-blocks/custom-select";
+// @import "default-blocks/custom-input";
+// @import "default-blocks/custom-toggle";
+// @import "default-blocks/custom-select";
 
+// @import "default-blocks/btn";
+
+@import "default-blocks/modal";
 @import "components/button";
 @import "components/logo";
-@import "blocks/header";
 @import "blocks/wrapper";
+@import "blocks/header";
 @import "blocks/advantages";
 @import "blocks/about";
 @import "blocks/services";

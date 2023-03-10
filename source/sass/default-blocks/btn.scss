@@ -1,5 +1,4 @@
 .btn {
-
   background-color: $color-neon-blue;
   border: none;
 
@@ -20,7 +19,5 @@
     pointer-events: none;
   }
 
-  @include hover-focus {
-    opacity: 0.8;
-  }
+  @include default-states(#ffffff);
 }

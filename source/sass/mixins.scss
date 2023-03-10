@@ -71,6 +71,39 @@
   }
 }
 
+@mixin default-outline($outline-color: $color-default-white) {
+  border-radius: 2px;
+  outline: 2px solid $outline-color;
+  outline-offset: 2px;
+}
+
+@mixin default-focus($outline-color) {
+  &:focus-visible {
+    @include default-outline($outline-color);
+    @content;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      @content;
+    }
+  }
+}
+
+@mixin default-states($outline-color: $color-default-white) {
+  transition: opacity $trans-default;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  @include default-focus($outline-color);
+}
+
 // Desktop first
 
 @mixin vp-1919 {

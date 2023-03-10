@@ -13,6 +13,8 @@
   text-decoration: none;
   text-transform: uppercase;
 
+  @include default-states($color-deep-sky-blue);
+
   &--transparent-white {
     background-color: transparent;
     border: 1px solid $color-default-white-alt;
