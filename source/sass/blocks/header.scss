@@ -129,8 +129,10 @@
   }
 
   &--anchor {
+    align-items: center;
     background-color: $color-deep-sky-blue;
     color: $color-default-white-alt;
+    display: flex;
     font-size: 18px;
     font-weight: 700;
     line-height: 100%;

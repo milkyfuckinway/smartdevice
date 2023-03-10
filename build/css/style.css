@@ -371,6 +371,7 @@ body {
   margin: 0;
   min-height: 100vh;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -1036,8 +1037,14 @@ button,
   }
 }
 .header__button--anchor {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #00b2ff;
   color: #f2f5f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 18px;
   font-weight: 700;
   line-height: 100%;
