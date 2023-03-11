@@ -343,21 +343,21 @@ template {
   font-family: "PT Mono";
   font-style: normal;
   font-weight: 400;
-  src: url("../../fonts/ptmono-regular.woff2") format("woff2"), url("../../fonts/ptmono-regular.woff") format("woff");
+  src: url("./../fonts/ptmono-regular.woff2") format("woff2"), url("./../fonts/ptmono-regular.woff") format("woff");
 }
 @font-face {
   font-display: swap;
   font-family: "Roboto Condensed";
   font-style: normal;
   font-weight: 400;
-  src: url("../../fonts/robotocondensed-regular.woff2") format("woff2"), url("../../fonts/robotocondensed-regular.woff") format("woff");
+  src: url("./../fonts/robotocondensed-regular.woff2") format("woff2"), url("./../fonts/robotocondensed-regular.woff") format("woff");
 }
 @font-face {
   font-display: swap;
   font-family: "Roboto Condensed";
   font-style: normal;
   font-weight: 700;
-  src: url("../../fonts/robotocondensed-bold.woff2") format("woff2"), url("../../fonts/robotocondensed-bold.woff") format("woff");
+  src: url("./../fonts/robotocondensed-bold.woff2") format("woff2"), url("./../fonts/robotocondensed-bold.woff") format("woff");
 }
 *,
 *::before,
@@ -1755,7 +1755,7 @@ button,
 }
 .services ul li::after {
   background-color: #00b2ff;
-  background-image: url("./../../img/svg/arrow.svg");
+  background-image: url("./../img/svg/arrow.svg");
   background-position: calc(50% + 3px);
   background-repeat: no-repeat;
   background-size: 6px;
@@ -2171,7 +2171,7 @@ button,
   border: 1px solid #ffffff;
 }
 .form__input--personal-data input[type=checkbox] + label::after {
-  background-image: url("../../img/svg/checkmark.svg");
+  background-image: url("./../img/svg/checkmark.svg");
   background-position: 40% center;
   background-repeat: no-repeat;
   background-size: 0;
