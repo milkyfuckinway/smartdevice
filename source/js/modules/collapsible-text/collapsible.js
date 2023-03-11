@@ -3,6 +3,8 @@ const collapsible = () => {
   const textContainer = document.querySelector('[data-collapsible-container]');
   const displayedContent = document.querySelector('[data-collapsible-displayed]');
   const hiddenContent = document.querySelector('[data-collapsible-hidden]');
+  const originalText = collapsibleButton.textContent;
+  const activeText = collapsibleButton.getAttribute('data-collapsible-text-active');
 
   if (collapsibleButton && textContainer && displayedContent && hiddenContent) {
     const setRootStyles = () => {
@@ -15,7 +17,13 @@ const collapsible = () => {
 
     window.addEventListener('resize', setRootStyles);
     collapsibleButton.addEventListener('click', () => {
-      textContainer.classList.toggle('about__text--shown');
+      if (textContainer.classList.contains('about__text--shown')) {
+        textContainer.classList.remove('about__text--shown');
+        collapsibleButton.textContent = originalText;
+      } else {
+        textContainer.classList.add('about__text--shown');
+        collapsibleButton.textContent = activeText;
+      }
     });
   }
 };
