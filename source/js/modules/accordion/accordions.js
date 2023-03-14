@@ -70,7 +70,7 @@ export class Accordions {
       const content = closeElement.querySelector('[data-accordion="content"]');
 
       const changeTabIndex = (currentParent, elem) => {
-        if (currentParent.dataset.destroy && !window.matchMedia(parent.dataset.destroy).matches) {
+        if (currentParent.dataset.destroy && !window.matchMedia(currentParent.dataset.destroy).matches) {
           elem.tabIndex = -1;
         } else {
           elem.removeAttribute('tabindex');
