@@ -68,6 +68,23 @@ export class Accordions {
     closeElements.forEach((closeElement) => {
       const parent = closeElement.closest('[data-accordion="parent"]');
       const content = closeElement.querySelector('[data-accordion="content"]');
+
+      const changeTabIndex = (currentParent, elem) => {
+        if (currentParent.dataset.destroy && !window.matchMedia(parent.dataset.destroy).matches) {
+          elem.tabIndex = -1;
+        } else {
+          elem.removeAttribute('tabindex');
+        }
+      };
+
+      const allParents = document.querySelectorAll('[data-accordion="parent"]');
+      allParents.forEach((item) => {
+        const buttons = item.querySelectorAll('[data-accordion="button"');
+        buttons.forEach((button) => {
+          changeTabIndex(item, button);
+        });
+      });
+
       if (parent.dataset.destroy && !window.matchMedia(parent.dataset.destroy).matches) {
         content.style.maxHeight = '100%';
         return;
@@ -152,4 +169,13 @@ export class Accordions {
       });
     }
   }
+
+  // setTabIndex(parent) {
+  //   const buttons = document.querySelectorAll('[data-accordion="button"]');
+  //   if (parent.dataset.destroy >= window.innerWidth) {
+  //     buttons.forEach((button) => {
+  //       button.tabIndex = -1;
+  //     });
+  //   }
+  // }
 }

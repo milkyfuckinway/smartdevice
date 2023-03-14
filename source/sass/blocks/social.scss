@@ -26,18 +26,23 @@
   list-style: none;
   margin: 0;
   margin-left: 10px;
+  max-width: 205px;
   padding: 0;
 
   @include vp-1023 {
     align-items: center;
     gap: 25px;
+    justify-content: center;
     margin-bottom: 5px;
     margin-left: 0;
+    max-width: 350px;
+    row-gap: 10px;
   }
 
   @include vp-767 {
     margin-bottom: 0;
     margin-left: 5px;
+    max-width: calc(100% - 50px);
   }
 }
 

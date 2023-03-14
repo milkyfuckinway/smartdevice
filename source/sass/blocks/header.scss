@@ -88,6 +88,7 @@
   color: $color-default-white-alt;
   display: flex;
   gap: 15px;
+  width: max-content;
 
   @include vp-1023 {
     padding: 10px;
