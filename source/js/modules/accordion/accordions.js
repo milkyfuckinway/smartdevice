@@ -169,13 +169,4 @@ export class Accordions {
       });
     }
   }
-
-  // setTabIndex(parent) {
-  //   const buttons = document.querySelectorAll('[data-accordion="button"]');
-  //   if (parent.dataset.destroy >= window.innerWidth) {
-  //     buttons.forEach((button) => {
-  //       button.tabIndex = -1;
-  //     });
-  //   }
-  // }
 }
